@@ -99,7 +99,7 @@ This is an example of how to list things you need to use the software and how to
 2. Install NPM packages
 
    ```sh
-   npm install
+   yarn install
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -110,7 +110,7 @@ This is an example of how to list things you need to use the software and how to
 Run the project using the following command:
 
 ```sh
-   npm run dev
+   yarn run dev
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
