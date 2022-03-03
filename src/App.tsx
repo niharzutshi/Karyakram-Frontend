@@ -1,6 +1,6 @@
 import { CssBaseline, createTheme, ThemeProvider } from '@mui/material'
 
-function App() {
+export const App = () => {
   const darkTheme = createTheme({
     palette: {
       mode: 'dark',
@@ -27,5 +27,3 @@ function App() {
     </ThemeProvider>
   )
 }
-
-export default App
