@@ -1,29 +1,15 @@
-import { CssBaseline, createTheme, ThemeProvider } from '@mui/material'
+import React from 'react';
+import { CssBaseline, ThemeProvider } from "@mui/material";
+
+import { darkTheme } from '@src/theme';
 
 export const App = () => {
-  const darkTheme = createTheme({
-    palette: {
-      mode: 'dark',
-      background: {
-        default: '#191919',
-        paper: '#242424',
-      }
-    },
-  })
-  const lightTheme = createTheme({
-    palette: {
-      mode: 'light',
-      background: {
-        default: '#FFFFFF',
-      }
-    },
-  })
-  return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <div>
-        <p>Hello World</p>
-      </div>
-    </ThemeProvider>
-  )
-}
+    return (
+        <ThemeProvider theme={darkTheme}>
+            <CssBaseline />
+            <div>
+                <p>Hello World</p>
+            </div>
+        </ThemeProvider>
+    );
+};
