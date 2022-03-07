@@ -8,6 +8,8 @@ import { Home } from '@pages/Home/Home';
 import { darkThemeSelectedState } from './store/DarkThemeSelectedState';
 import { darkTheme, lightTheme } from './theme';
 
+import './App.scss';
+
 export const App = () => {
   const darkThemeSelected = useRecoilValue(darkThemeSelectedState);
   return (
@@ -16,7 +18,7 @@ export const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Dasboard" element={<Dasboard />} />
+          <Route path="/dashboard" element={<Dasboard />} />
         </Routes>
       </Router>
     </ThemeProvider>
