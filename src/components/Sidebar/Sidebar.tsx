@@ -95,25 +95,6 @@ export const Sidebar: React.FC<ISidebar> = ({ collapsed, rtl }) => {
           </SubMenu>
         </Menu>
       </SidebarContent>
-
-      <SidebarFooter style={{ textAlign: 'center' }}>
-        <div
-          className="sidebar-btn-wrapper"
-          style={{
-            padding: '20px 24px'
-          }}>
-          <a
-            href="https://github.com/azouaoui-med/react-pro-sidebar"
-            target="_blank"
-            className="sidebar-btn"
-            rel="noopener noreferrer">
-            <FaGithub />
-            <span style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>
-              viewSource
-            </span>
-          </a>
-        </div>
-      </SidebarFooter>
     </ProSidebar>
   );
 };

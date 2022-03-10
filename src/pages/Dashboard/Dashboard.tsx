@@ -4,6 +4,7 @@ import { useRecoilState } from 'recoil';
 
 import { darkThemeSelectedState } from '@src/store/DarkThemeSelectedState';
 import { Sidebar } from '@components/Sidebar/Sidebar';
+import { ExpandableCard } from '@components/ExpandableCard/ExpandableCard';
 
 export const Dasboard = () => {
   const [darkThemeSelected, setDarkThemeSelected] = useRecoilState(darkThemeSelectedState);
@@ -11,6 +12,7 @@ export const Dasboard = () => {
     <div>
       <Sidebar collapsed={true} rtl={false} />
       <DarkModeToggle onChange={setDarkThemeSelected} checked={darkThemeSelected} size={80} />
+      <ExpandableCard />
     </div>
   );
 };
