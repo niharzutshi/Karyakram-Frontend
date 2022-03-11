@@ -1,0 +1,29 @@
+.trending-card {
+    &__container {
+        margin: 50px;
+        padding: 0 0 10px 0;
+        border-radius: none !important;
+    }
+    &__title {
+        padding: 0 0 0 15px !important;
+        cursor: default !important;
+    }
+    &__register-button {
+        background-color: #800C83 !important;
+        padding: 8px !important;
+        color: white !important;
+        border-radius: 10px !important;
+        text-transform: none !important;
+        margin: 0 20px 0px 20px !important;
+    }
+    &__register-button:hover {
+        background-color: #c11fc7 !important;
+    }
+    &__bookmark-button {
+        padding: 5px !important;
+        border: 3px solid #800C83 !important;
+        color: white !important;
+        border-radius: 10px !important;
+        text-transform: none !important;
+    }
+}
