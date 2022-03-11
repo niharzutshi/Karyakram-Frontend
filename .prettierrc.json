@@ -3,6 +3,7 @@
     "spaces": 4,
     "printWidth": 100,
     "singleQuote": true,
+    "doubleQuote": true,
     "trailingComma": "none",
     "jsxBracketSameLine": true,
     "endOfLine": "auto",
