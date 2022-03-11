@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
@@ -35,6 +36,7 @@ export default function PlanMeeting() {
         <Grid item xs={6}>
           <Box sx={{ display: 'flex', flexDirection: 'row', backgroundColor: '#242424' }}>
             <CalendarTodayOutlinedIcon sx={{ color: '#800C83', transform: 'scale(1.8)' }} />
+            {/*@ts-ignore*/}
             <Typography component="div" variant="h7" sx={{ marginLeft: '13px' }}>
               26 Thursday, February, 2022
             </Typography>
@@ -43,6 +45,7 @@ export default function PlanMeeting() {
         <Grid item xs={6}>
           <Box sx={{ display: 'flex', flexDirection: 'row', backgroundColor: '#242424' }}>
             <AccessTimeOutlinedIcon sx={{ color: '#800C83', transform: 'scale(1.8)' }} />
+            {/*@ts-ignore*/}
             <Typography component="div" variant="h7" sx={{ marginLeft: '13px' }}>
               2:30 - 3:00 pm
             </Typography>
