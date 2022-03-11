@@ -1,7 +1,11 @@
 import React from 'react';
-
-import './Trending.scss';
+import { TrendingCard } from '@components/TrendingCard/TrendingCard';
 
 export const Trending = () => {
-  return <div>Trending</div>;
+  return (
+    <div>
+      Trending Events
+      <TrendingCard />
+    </div>
+  );
 };

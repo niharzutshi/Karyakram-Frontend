@@ -48,7 +48,7 @@ export const ExpandableCard = () => {
         <div className="expandable-card__details">
           <span className="expandable-card__details-title">Karyakram Meet</span>
           <br />
-          <span>Feb 10, 2022</span>
+          <span className="date">Feb 10, 2022</span>
         </div>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
