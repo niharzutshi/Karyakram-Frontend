@@ -29,18 +29,22 @@ const ExpandedContent = () => {
 
 interface ExpandableCardProps {
   color?: string;
+  width?: string;
 }
 
-export const ExpandableCard: React.FC<ExpandableCardProps> = ({ color = '#644BAB' }) => {
+export const ExpandableCard: React.FC<ExpandableCardProps> = ({
+  color = '#644BAB',
+  width = '345px'
+}) => {
   const [expanded, setExpanded] = useState(false);
   const [rotateChevron, setRotateChevron] = useState(false);
   const handleRotate = () => setRotateChevron(!rotateChevron);
-  console.log(color);
+
   return (
     <Card
       className="expandable-card__container"
       sx={{
-        width: '100%',
+        width: width,
         backgroundColor: color
       }}>
       <CardActions disableSpacing>
