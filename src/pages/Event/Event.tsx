@@ -21,9 +21,9 @@ import './Event.scss';
 export const Event = () => {
   const theme = useTheme();
   return (
-    <Box sx={{ flexGrow: 1, padding: 5 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={6} md={9}>
+    <Box sx={{ flexGrow: 1, padding: 5, background: 'none' }}>
+      <Grid container spacing={2} sx={{ background: 'none' }}>
+        <Grid item xs={6} md={9} sx={{ background: 'none' }}>
           <Grid container spacing={2}>
             <Grid item xs={8}>
               <Container className="event-back">
@@ -33,22 +33,23 @@ export const Event = () => {
                 sunt id minima? Laudantium, perferendis officiis!
               </Container>
             </Grid>
-            <Grid item xs={4} sx={{ marginTop: '55px' }}>
+            <Grid item xs={4} sx={{ marginTop: '55px', background: 'none' }}>
               <Card
                 sx={{
                   display: 'flex',
                   flexDirection: 'column',
-                  justifyContent: 'center',
                   borderRadius: '25px',
-                  padding: '25px'
+                  padding: '25px',
+                  background: 'none'
                 }}>
-                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                   <CalendarTodayIcon
                     sx={{
                       color: '#800C83',
                       marginTop: '20px',
-                      marginRight: '15px',
-                      fontSize: '50px'
+                      fontSize: '50px',
+                      justifyContent: 'left',
+                      alignItems: 'left'
                     }}
                   />
                   <CardContent sx={{}}>
@@ -58,7 +59,7 @@ export const Event = () => {
                   </CardContent>
                 </Box>
 
-                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                   <QueryBuilderIcon
                     sx={{
                       color: '#800C83',
@@ -73,12 +74,11 @@ export const Event = () => {
                   </CardContent>
                 </Box>
 
-                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                   <PeopleAltIcon
                     sx={{
                       color: '#800C83',
                       marginTop: '20px',
-                      marginRight: '15px',
                       fontSize: '50px'
                     }}
                   />
@@ -89,18 +89,17 @@ export const Event = () => {
                   </CardContent>
                 </Box>
 
-                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                   <LocationOnIcon
                     sx={{
                       color: '#800C83',
                       marginTop: '20px',
-                      marginRight: '15px',
                       fontSize: '50px'
                     }}
                   />
                   <CardContent sx={{}}>
                     <Typography component="div" variant="h4" sx={{ marginTop: '8px' }}>
-                      15 Mar
+                      N-Block
                     </Typography>
                   </CardContent>
                 </Box>

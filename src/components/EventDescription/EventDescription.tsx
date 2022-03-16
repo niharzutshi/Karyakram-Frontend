@@ -6,50 +6,65 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import ButtonBase from '@mui/material/ButtonBase';
+
+const Img = styled('img')({
+  margin: 'auto',
+  display: 'block',
+  maxWidth: '100%',
+  maxHeight: '100%'
+});
 export const EventDescription = () => {
   return (
-    <CardContent sx={{ display: 'flex', flexDirection: 'row', padding: 2, width: '100%' }}>
-      <CardMedia
-        component="img"
-        sx={{ width: 100, height: 100, borderRadius: '360px', border: ' 5px solid #800C83;' }}
-        image="https://static.remove.bg/remove-bg-web/726c8211ef4fdb5ce44accdf843f9bab4d2a356a/assets/start_remove-c851bdf8d3127a24e2d137a55b1b427378cd17385b01aec6e59d5d4b5f39d2ec.png"
-        alt="Live from space album cover"
-      />
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'left',
-          color: 'white'
-        }}>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'left',
-            color: 'white',
-            padding: 2
-          }}>
-          {/*@ts-ignore*/}
-          <Typography component="div" variant="h4">
-            Event Name
-          </Typography>
-          <Typography variant="h6" component="div">
-            Organization
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'right',
-            flexDirection: 'row'
-          }}>
-          <Button className="right-panel__button">Bookmark</Button>
-          <Button className="right-panel__button">Share</Button>
-        </Box>
-      </Box>
-
-      
-    </CardContent>
+    <Paper
+      sx={{
+        p: 2,
+        margin: 'auto',
+        flexGrow: 1,
+        background: 'none'
+      }}>
+      <Grid container spacing={2}>
+        <Grid item>
+          <ButtonBase sx={{}}>
+            <Img
+              sx={{
+                height: '100px',
+                width: '100px',
+                borderRadius: '360px',
+                border: '5px solid #800C83'
+              }}
+              alt="complex"
+              src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg"
+            />
+          </ButtonBase>
+        </Grid>
+        <Grid item xs={12} sm container>
+          <Grid item xs container direction="column" spacing={2}>
+            <Grid item xs>
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                sx={{ alignItems: 'center', justifyContent: 'center' }}>
+                UserName
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid spacing={1}>
+            <Button
+              variant="contained"
+              sx={{ backgroundColor: '#800C83', marginRight: '15px', borderRadius: '10px' }}>
+              Register
+            </Button>
+            <Button variant="contained" sx={{ backgroundColor: '#800C83', borderRadius: '10px' }}>
+              Submit
+            </Button>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Paper>
   );
 };
