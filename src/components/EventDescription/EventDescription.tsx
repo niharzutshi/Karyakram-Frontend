@@ -48,6 +48,8 @@ export const EventDescription = () => {
           <Button className="right-panel__button">Share</Button>
         </Box>
       </Box>
+
+      
     </CardContent>
   );
 };
