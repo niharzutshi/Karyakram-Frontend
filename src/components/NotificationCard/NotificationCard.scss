@@ -1,0 +1,51 @@
+.notification-card {
+    &__container {
+        width: 345px;
+        margin-left: 20px;
+        background-color: #644BAB;
+        border-radius: 10px !important;
+        color: white !important;
+        cursor: default;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        padding: 5px 15px 5px 15px !important;
+        margin: 15px;
+    }
+    &__details {
+        margin-left: 10px;
+        font-size: 17px;
+        &-title {
+            font-weight: bold;
+        }
+    }
+    &__close-button {
+        cursor: pointer;
+        margin-top: 1px;
+    }
+    &__buttons {
+        text-transform: none !important;
+        color: white !important;
+        background: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 5px 10px 5px 10px;
+        background-color: #734273;
+        margin-right: 10px;
+    }
+    &__buttons:hover {
+        background-color: white;
+        color: #5B245C !important;
+    }
+}
+
+.main-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-box {
+    display: flex;
+}
