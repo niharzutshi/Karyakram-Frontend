@@ -5,13 +5,27 @@
     border-radius: 25px;
     margin-left: 1vh;
     color: white;
-    padding:50px;
-;}
+    padding: 50px;
+    display: flex;
+    display: flex; /* adjusted */
+    flex: 1;
+    margin-left: 0;
+    max-width: 100%;
+    width: 100%;
+}
 
-.right{
-    margin-top: 10vh;
-    background-color: #242424;
-    padding: 5px;
-    color:white;
-    border-radius: 20px;
+.calendar {
+    &__title {
+        margin: 0 0 25px 25px;
+    }
+    &__proceed-button {
+        border: none;
+        background-color: #5B155D;
+        border-radius: 10px;
+        min-width: 50px;
+        min-height: 50px;
+        color: white;
+        font-size: larger;
+        cursor: pointer;
+    }
 }
