@@ -1,7 +1,7 @@
 .notification-card {
     &__container {
         width: 345px;
-        margin-left: 20px;
+        margin: 15px 15px 15px 20px;
         background-color: #644BAB;
         border-radius: 10px !important;
         color: white !important;
@@ -11,7 +11,6 @@
         align-content: center;
         flex-direction: column;
         padding: 5px 15px 5px 15px !important;
-        margin: 15px;
     }
     &__details {
         margin-left: 10px;
