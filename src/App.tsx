@@ -21,21 +21,25 @@ import './App.scss';
 
 export const App = () => {
   const darkThemeSelected = useRecoilValue(darkThemeSelectedState);
-  return (
+   return (
     <ThemeProvider theme={darkThemeSelected ? darkTheme : lightTheme}>
       <CssBaseline />
       <Router>
-        <Sidebar collapsed={true} rtl={false} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dasboard />} />
-          <Route path="/trending" element={<Trending />} />
-          <Route path="/event" element={<Event />} />
-          <Route path="/calendar" element={<Calendar />} />
-          <Route path="/user" element={<User />} />
-          <Route path="/schedule" element={<Schedule />} />
-          <Route path="/notifications" element={<Notifications />} />
-        </Routes>
+        <div style={{
+          display: 'flex',
+        }}>
+          <Sidebar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dasboard />} />
+            <Route path="/trending" element={<Trending />} />
+            <Route path="/event" element={<Event />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/user" element={<User />} />
+            <Route path="/schedule" element={<Schedule />} />
+            <Route path="/notifications" element={<Notifications />} />
+          </Routes>
+        </div>
       </Router>
     </ThemeProvider>
   );

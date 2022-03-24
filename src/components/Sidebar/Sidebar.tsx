@@ -1,33 +1,78 @@
 import React from 'react';
-import { ProSidebar, Menu, MenuItem, SubMenu, SidebarContent } from 'react-pro-sidebar';
-import { FaList } from 'react-icons/fa';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import HomeIcon from '@mui/icons-material/Home';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import EventIcon from '@mui/icons-material/Event';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import PersonIcon from '@mui/icons-material/Person';
+import EventNoteIcon from '@mui/icons-material/EventNote';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import { Drawer, List, ListItem, ListItemIcon } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 import 'react-pro-sidebar/dist/css/styles.css';
 
-interface ISidebar {
-  collapsed: any;
-  rtl: any;
-}
-
-export const Sidebar: React.FC<ISidebar> = ({ collapsed, rtl }) => {
+export const Sidebar: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <ProSidebar rtl={rtl} collapsed={collapsed} toggled={true} breakPoint="md">
-      <SidebarContent>
-        <Menu iconShape="circle">
-          <SubMenu title="multiLevel" icon={<FaList />}>
-            <MenuItem onClick={() => navigate('/')}>Landing</MenuItem>
-            <MenuItem onClick={() => navigate('/dashboard')}>Dashboard</MenuItem>
-            <MenuItem onClick={() => navigate('/trending')}>Trending</MenuItem>
-            <MenuItem onClick={() => navigate('/event')}>Event</MenuItem>
-            <MenuItem onClick={() => navigate('/calendar')}>Calendar</MenuItem>
-            <MenuItem onClick={() => navigate('/user')}>User Profile</MenuItem>
-            <MenuItem onClick={() => navigate('/schedule')}>Schedule</MenuItem>
-            <MenuItem onClick={() => navigate('/notifications')}>Notifications</MenuItem>
-          </SubMenu>
-        </Menu>
-      </SidebarContent>
-    </ProSidebar>
+    <Drawer
+      sx={{
+        width: 72,
+        flexShrink: 0,
+        '& .MuiDrawer-paper': {
+          width: 72,
+          display: "flex",
+          justifyContent: "center",
+          boxSizing: 'border-box',
+          background: "rgb(57,44,93) linear-gradient(0deg, rgba(77,66,135,1) 0%, rgba(37,26,68,1) 100%)",
+          overflow: "hidden"
+        },
+      }}
+      variant="permanent"
+      anchor="left"
+    >
+      <List>
+        <ListItem button alignItems="center" key="h" onClick={() => navigate('/')}>
+          <ListItemIcon>
+            <HomeIcon />
+          </ListItemIcon>
+        </ListItem>
+        <ListItem button alignItems="center" key="d" onClick={() => navigate('/dashboard')}>
+          <ListItemIcon>
+            <DashboardIcon />
+          </ListItemIcon>
+        </ListItem>
+        <ListItem button alignItems="center" key="t" onClick={() => navigate('/trending')}>
+          <ListItemIcon>
+            <TrendingUpIcon />
+          </ListItemIcon>
+        </ListItem>
+        <ListItem button alignItems="center" key="e" onClick={() => navigate('/event')}>
+          <ListItemIcon>
+            <EventIcon />
+          </ListItemIcon>
+        </ListItem>
+        <ListItem button alignItems="center" key="c" onClick={() => navigate('/calendar')}>
+          <ListItemIcon>
+            <CalendarTodayIcon />
+          </ListItemIcon>
+        </ListItem>
+        <ListItem button alignItems="center" key="u" onClick={() => navigate('/user')}>
+          <ListItemIcon>
+            <PersonIcon />
+          </ListItemIcon>
+        </ListItem>
+        <ListItem button alignItems="center" key="s" onClick={() => navigate('/schedule')}>
+          <ListItemIcon>
+            <EventNoteIcon />
+          </ListItemIcon>
+        </ListItem>
+        <ListItem button alignItems="center" key="n" onClick={() => navigate('/notifications')}>
+          <ListItemIcon>
+            <NotificationsIcon />
+          </ListItemIcon>
+        </ListItem>
+      </List>
+    </Drawer>
   );
 };
