@@ -1,16 +1,16 @@
 import React from 'react';
+import './Sidebar.scss';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import HomeIcon from '@mui/icons-material/Home';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import EventIcon from '@mui/icons-material/Event';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import PersonIcon from '@mui/icons-material/Person';
-import EventNoteIcon from '@mui/icons-material/EventNote';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Drawer, List, ListItem, ListItemIcon } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import Tooltip from '@mui/material/Tooltip';
 
-import 'react-pro-sidebar/dist/css/styles.css';
+import KaryakramIcon from '../../assets/images/K.svg';
 
 export const Sidebar: React.FC = () => {
   const navigate = useNavigate();
@@ -21,56 +21,64 @@ export const Sidebar: React.FC = () => {
         flexShrink: 0,
         '& .MuiDrawer-paper': {
           width: 72,
+          paddingTop: 1,
           display: 'flex',
-          justifyContent: 'center',
           boxSizing: 'border-box',
-          background:
-            'rgb(57,44,93) linear-gradient(0deg, rgba(77,66,135,1) 0%, rgba(37,26,68,1) 100%)',
+          background: 'linear-gradient(0deg, rgba(80,8,117,1) 0%, rgba(52,8,100,1) 100%);',
           overflow: 'hidden'
         }
       }}
       variant="permanent"
       anchor="left">
-      <List>
+      <List className="sidebar-icon-list">
         <ListItem button alignItems="center" key="h" onClick={() => navigate('/')}>
-          <ListItemIcon>
-            <HomeIcon />
-          </ListItemIcon>
-        </ListItem>
-        <ListItem button alignItems="center" key="d" onClick={() => navigate('/dashboard')}>
-          <ListItemIcon>
-            <DashboardIcon />
-          </ListItemIcon>
-        </ListItem>
-        <ListItem button alignItems="center" key="t" onClick={() => navigate('/trending')}>
-          <ListItemIcon>
-            <TrendingUpIcon />
-          </ListItemIcon>
-        </ListItem>
-        <ListItem button alignItems="center" key="e" onClick={() => navigate('/event')}>
-          <ListItemIcon>
-            <EventIcon />
-          </ListItemIcon>
-        </ListItem>
-        <ListItem button alignItems="center" key="c" onClick={() => navigate('/calendar')}>
-          <ListItemIcon>
-            <CalendarTodayIcon />
-          </ListItemIcon>
-        </ListItem>
-        <ListItem button alignItems="center" key="u" onClick={() => navigate('/user')}>
-          <ListItemIcon>
-            <PersonIcon />
-          </ListItemIcon>
-        </ListItem>
-        <ListItem button alignItems="center" key="s" onClick={() => navigate('/schedule')}>
-          <ListItemIcon>
-            <EventNoteIcon />
-          </ListItemIcon>
+          <Tooltip title="Home">
+            <ListItemIcon className="karyakram-logo">
+              <img src={KaryakramIcon} />
+            </ListItemIcon>
+          </Tooltip>
         </ListItem>
         <ListItem button alignItems="center" key="n" onClick={() => navigate('/notifications')}>
-          <ListItemIcon>
-            <NotificationsIcon />
-          </ListItemIcon>
+          <Tooltip title="Notificaitons">
+            <ListItemIcon>
+              <NotificationsIcon fontSize="large" sx={{ color: 'white' }} />
+            </ListItemIcon>
+          </Tooltip>
+        </ListItem>
+        <ListItem button alignItems="center" key="d" onClick={() => navigate('/dashboard')}>
+          <Tooltip title="Dasboard">
+            <ListItemIcon>
+              <DashboardIcon fontSize="large" sx={{ color: 'white' }} />
+            </ListItemIcon>
+          </Tooltip>
+        </ListItem>
+        <ListItem button alignItems="center" key="t" onClick={() => navigate('/trending')}>
+          <Tooltip title="Trending">
+            <ListItemIcon>
+              <TrendingUpIcon fontSize="large" sx={{ color: 'white' }} />
+            </ListItemIcon>
+          </Tooltip>
+        </ListItem>
+        <ListItem button alignItems="center" key="e" onClick={() => navigate('/event')}>
+          <Tooltip title="Event">
+            <ListItemIcon>
+              <EventIcon fontSize="large" sx={{ color: 'white' }} />
+            </ListItemIcon>
+          </Tooltip>
+        </ListItem>
+        <ListItem button alignItems="center" key="c" onClick={() => navigate('/calendar')}>
+          <Tooltip title="Calendar">
+            <ListItemIcon>
+              <CalendarTodayIcon fontSize="large" sx={{ color: 'white' }} />
+            </ListItemIcon>
+          </Tooltip>
+        </ListItem>
+        <ListItem button alignItems="center" key="u" onClick={() => navigate('/user')}>
+          <Tooltip title="User">
+            <ListItemIcon>
+              <PersonIcon fontSize="large" sx={{ color: 'white' }} />
+            </ListItemIcon>
+          </Tooltip>
         </ListItem>
       </List>
     </Drawer>
