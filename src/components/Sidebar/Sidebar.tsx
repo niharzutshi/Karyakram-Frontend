@@ -21,16 +21,16 @@ export const Sidebar: React.FC = () => {
         flexShrink: 0,
         '& .MuiDrawer-paper': {
           width: 72,
-          display: "flex",
-          justifyContent: "center",
+          display: 'flex',
+          justifyContent: 'center',
           boxSizing: 'border-box',
-          background: "rgb(57,44,93) linear-gradient(0deg, rgba(77,66,135,1) 0%, rgba(37,26,68,1) 100%)",
-          overflow: "hidden"
-        },
+          background:
+            'rgb(57,44,93) linear-gradient(0deg, rgba(77,66,135,1) 0%, rgba(37,26,68,1) 100%)',
+          overflow: 'hidden'
+        }
       }}
       variant="permanent"
-      anchor="left"
-    >
+      anchor="left">
       <List>
         <ListItem button alignItems="center" key="h" onClick={() => navigate('/')}>
           <ListItemIcon>
