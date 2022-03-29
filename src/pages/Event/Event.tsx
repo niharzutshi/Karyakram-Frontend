@@ -21,19 +21,21 @@ import './Event.scss';
 export const Event = () => {
   const theme = useTheme();
   return (
-    <Box sx={{ flexGrow: 1, padding: 5, background: 'none' }}>
+    <Box sx={{ flexGrow: 1, background: 'none' }}>
       <Grid container spacing={2} sx={{ background: 'none' }}>
         <Grid item xs={6} md={9} sx={{ background: 'none' }}>
           <Grid container spacing={2}>
-            <Grid item xs={8}>
+            <Grid item xs={8} sx={{ marginTop: '25px' }}>
               <Container className="event-back">
                 <EventDescription />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam atque sint similique
-                quam recusandae vitae illum, eaque beatae, qui possimus eum iste voluptas, veniam
-                sunt id minima? Laudantium, perferendis officiis!
+                <Container sx={{marginTop:'28px'}}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam atque sint
+                  similique quam recusandae vitae illum, eaque beatae, qui possimus eum iste
+                  voluptas, veniam sunt id minima? Laudantium, perferendis officiis!
+                </Container>
               </Container>
             </Grid>
-            <Grid item xs={4} sx={{ marginTop: '55px', background: 'none' }}>
+            <Grid item xs={4} sx={{ background: 'none', marginTop: '18px' }}>
               <Card
                 sx={{
                   display: 'flex',
@@ -104,7 +106,15 @@ export const Event = () => {
                   </CardContent>
                 </Box>
                 <Stack sx={{ justifyContent: 'center' }} direction="row">
-                  <Button sx={{ backgroundColor: '#800C83' }} variant="contained">
+                  <Button
+                    sx={{
+                      backgroundColor: '#800C83',
+                      textTransform: 'none',
+                      textEmphasisColor: 'white',
+                      color: 'white',
+                      '&:hover': { backgroundColor: 'white', color: 'black' }
+                    }}
+                    variant="contained">
                     Register
                   </Button>
                 </Stack>

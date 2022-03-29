@@ -18,9 +18,9 @@ export const RightPanelUpper = () => {
         width: '350px',
         marginTop: 8
       }}>
-      <ExpandableCard color="#432452" width="100%" />
-      <ExpandableCard color="#432452" width="100%" />
-      <ExpandableCard color="#432452" width="100%" />
+      <ExpandableCard color="#800C83" width="100%" />
+      <ExpandableCard color="#800C83" width="100%" />
+      <ExpandableCard color="#800C83" width="100%" />
     </Box>
   );
 };
