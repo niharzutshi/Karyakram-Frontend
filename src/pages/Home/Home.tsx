@@ -13,7 +13,8 @@ export const Home = () => {
     <div>
       Landing Page
       <DarkModeToggle onChange={setDarkThemeSelected} checked={darkThemeSelected} size={80} />
-      <button onClick={() => navigate('/dashboard')}>Go to dashboard</button>
+      <button onClick={() => navigate('/dashboard')}>Dashboard</button>
+      <button onClick={() => navigate('/event')}>Event</button>
     </div>
   );
 };
