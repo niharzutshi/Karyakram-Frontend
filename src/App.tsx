@@ -16,7 +16,7 @@ import { Sidebar } from '@components/Sidebar/Sidebar';
 import { darkThemeSelectedState } from './store/DarkThemeSelectedState';
 import { darkTheme, lightTheme } from './theme';
 
-import AstroPlanet from './assets/images/astronaut+planet.svg';
+import AstroPlanet from './assets/images/astronaut+planet.png';
 
 import './App.scss';
 
@@ -44,7 +44,7 @@ export const App = () => {
             </Routes>
           </div>
         </div>
-        <img src={AstroPlanet} alt="astronaut+planet" className="astro-planet" />
+        <img src={AstroPlanet} alt="astronaut on planet" className="astro-planet" />
       </Router>
     </ThemeProvider>
   );
