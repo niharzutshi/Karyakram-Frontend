@@ -25,15 +25,17 @@ export const Event = () => {
       <Grid container spacing={2} sx={{ background: 'none' }}>
         <Grid item xs={6} md={9} sx={{ background: 'none' }}>
           <Grid container spacing={2}>
-            <Grid item xs={8}>
+            <Grid item xs={8} sx={{ marginTop: '25px' }}>
               <Container className="event-back">
                 <EventDescription />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam atque sint similique
-                quam recusandae vitae illum, eaque beatae, qui possimus eum iste voluptas, veniam
-                sunt id minima? Laudantium, perferendis officiis!
+                <Container sx={{marginTop:'28px'}}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam atque sint
+                  similique quam recusandae vitae illum, eaque beatae, qui possimus eum iste
+                  voluptas, veniam sunt id minima? Laudantium, perferendis officiis!
+                </Container>
               </Container>
             </Grid>
-            <Grid item xs={4} sx={{ background: 'none', marginTop:'18px' }}>
+            <Grid item xs={4} sx={{ background: 'none', marginTop: '18px' }}>
               <Card
                 sx={{
                   display: 'flex',
@@ -109,8 +111,8 @@ export const Event = () => {
                       backgroundColor: '#800C83',
                       textTransform: 'none',
                       textEmphasisColor: 'white',
-                      color:'white',
-                      '&:hover': { backgroundColor: 'white', color:'black' }
+                      color: 'white',
+                      '&:hover': { backgroundColor: 'white', color: 'black' }
                     }}
                     variant="contained">
                     Register

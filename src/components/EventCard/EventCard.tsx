@@ -36,7 +36,7 @@ export const EventCard = () => {
           <Typography component="div" variant="h9">
             Why BTS though
           </Typography>
-          <Typography variant="subtitle1" component="div" color="#455a64">
+          <Typography variant="subtitle1" component="div" color="#432452">
             I am still confused
           </Typography>
         </Box>
