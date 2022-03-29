@@ -6,7 +6,6 @@ import Container from '@mui/material/Container';
 import { EventDescription } from '@components/EventDescription/EventDescription';
 import { RightPanelUpper } from '@components/RightPanelUpper/RightPanelUpper';
 import { RightPanelLower } from '@components/RightPanelLower/RightPanelLower';
-import { useTheme } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -19,7 +18,6 @@ import Button from '@mui/material/Button';
 import './Event.scss';
 
 export const Event = () => {
-  const theme = useTheme();
   return (
     <Box sx={{ flexGrow: 1, background: 'none' }}>
       <Grid container spacing={2} sx={{ background: 'none' }}>

@@ -1,10 +1,7 @@
 import React from 'react';
 import './Sidebar.scss';
-import DashboardIcon from '@mui/icons-material/Dashboard';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import EventIcon from '@mui/icons-material/Event';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import PersonIcon from '@mui/icons-material/Person';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Drawer, List, ListItem, ListItemIcon } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
@@ -45,13 +42,6 @@ export const Sidebar: React.FC = () => {
             </ListItemIcon>
           </Tooltip>
         </ListItem>
-        <ListItem button alignItems="center" key="d" onClick={() => navigate('/dashboard')}>
-          <Tooltip title="Dasboard">
-            <ListItemIcon>
-              <DashboardIcon fontSize="large" sx={{ color: 'white' }} />
-            </ListItemIcon>
-          </Tooltip>
-        </ListItem>
         <ListItem button alignItems="center" key="t" onClick={() => navigate('/trending')}>
           <Tooltip title="Trending">
             <ListItemIcon>
@@ -59,24 +49,10 @@ export const Sidebar: React.FC = () => {
             </ListItemIcon>
           </Tooltip>
         </ListItem>
-        <ListItem button alignItems="center" key="e" onClick={() => navigate('/event')}>
-          <Tooltip title="Event">
-            <ListItemIcon>
-              <EventIcon fontSize="large" sx={{ color: 'white' }} />
-            </ListItemIcon>
-          </Tooltip>
-        </ListItem>
         <ListItem button alignItems="center" key="c" onClick={() => navigate('/calendar')}>
           <Tooltip title="Calendar">
             <ListItemIcon>
               <CalendarTodayIcon fontSize="large" sx={{ color: 'white' }} />
-            </ListItemIcon>
-          </Tooltip>
-        </ListItem>
-        <ListItem button alignItems="center" key="u" onClick={() => navigate('/user')}>
-          <Tooltip title="User">
-            <ListItemIcon>
-              <PersonIcon fontSize="large" sx={{ color: 'white' }} />
             </ListItemIcon>
           </Tooltip>
         </ListItem>

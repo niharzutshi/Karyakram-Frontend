@@ -6,3 +6,14 @@ body {
 .main-area {
     margin: 20px;
 }
+
+.App {
+    position: absolute;
+    z-index: 1;
+}
+
+.astro-planet {
+    position: absolute;
+    z-index: 2;
+    top: 57.4%;
+}

@@ -25,6 +25,7 @@ export const App = () => {
       <CssBaseline />
       <Router>
         <div
+          className="App"
           style={{
             display: 'flex'
           }}>
@@ -41,6 +42,11 @@ export const App = () => {
             </Routes>
           </div>
         </div>
+        <img
+          src="https://i.imgur.com/ZBvrLmY.png"
+          alt="astronaut on planet"
+          className="astro-planet"
+        />
       </Router>
     </ThemeProvider>
   );
