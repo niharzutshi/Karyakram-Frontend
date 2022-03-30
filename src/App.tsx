@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 
 import { Dasboard } from '@pages/Dashboard/Dashboard';
-import { Home } from '@pages/Home/Home';
+import { LandingPage } from '@pages/LandingPage/LandingPage';
 import { Trending } from '@pages/Trending/Trending';
 import { Event } from '@pages/Event/Event';
 import { Calendar } from '@pages/Calendar/Calendar';
@@ -14,26 +14,28 @@ import { Notifications } from '@pages/Notifications/Notifications';
 import { Sidebar } from '@components/Sidebar/Sidebar';
 
 import { darkThemeSelectedState } from './store/DarkThemeSelectedState';
+import { userAuthState } from './store/UserAuthState';
+
 import { darkTheme, lightTheme } from './theme';
 
 import './App.scss';
 
 export const App = () => {
   const darkThemeSelected = useRecoilValue(darkThemeSelectedState);
+  const userAuthenticated = useRecoilValue(userAuthState);
   return (
     <ThemeProvider theme={darkThemeSelected ? darkTheme : lightTheme}>
       <CssBaseline />
       <Router>
-        <div
-          className="App"
-          style={{
-            display: 'flex'
-          }}>
-          <Sidebar />
+        <div className="App">
+          {!userAuthenticated ? <Sidebar /> : ''}
           <div className="main-area">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/dashboard" element={<Dasboard />} />
+              {userAuthenticated ? (
+                <Route path="/" element={<LandingPage />} />
+              ) : (
+                <Route path="/" element={<Dasboard />} />
+              )}
               <Route path="/trending" element={<Trending />} />
               <Route path="/event" element={<Event />} />
               <Route path="/calendar" element={<Calendar />} />
