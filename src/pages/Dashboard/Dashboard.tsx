@@ -3,6 +3,7 @@ import DarkModeToggle from 'react-dark-mode-toggle';
 import { useRecoilState } from 'recoil';
 
 import { darkThemeSelectedState } from '@src/store/DarkThemeSelectedState';
+
 import { ExpandableCard } from '@components/ExpandableCard/ExpandableCard';
 import { SearchBar } from '@components/SearchBar/SearchBar';
 
