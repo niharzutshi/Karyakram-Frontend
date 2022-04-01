@@ -18,7 +18,6 @@ export const LandingPage = () => {
         }}>
         Authenticate
       </button>
-      <LandingInfo />
       <LandingCard />
     </div>
   );
