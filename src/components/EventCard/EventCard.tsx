@@ -34,10 +34,10 @@ export const EventCard = () => {
           }}>
           {/*@ts-ignore*/}
           <Typography component="div" variant="h9">
-            Why BTS though
+            UserName
           </Typography>
           <Typography variant="subtitle1" component="div" color="#432452">
-            I am still confused
+            Bio
           </Typography>
         </Box>
         <Button className="right-panel__button">Register</Button>

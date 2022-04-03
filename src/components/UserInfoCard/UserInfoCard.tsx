@@ -29,14 +29,14 @@ export const UserInfoCard = () => {
             color: 'white'
           }}>
           <Typography component="div" variant="h5">
-            Why BTS though
+            UserName
           </Typography>
           <Typography variant="subtitle1" component="div" color="#455a64">
-            I am still confused
+            Bio
           </Typography>
 
           <Typography variant="subtitle1" component="div" color="#455a64">
-            What to write here to check if it all is working okayish
+            Availability status
           </Typography>
         </Box>
       </Box>
