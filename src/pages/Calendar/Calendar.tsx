@@ -10,7 +10,7 @@ import { RightPanelUpper } from '@components/RightPanelUpper/RightPanelUpper';
 import { RightPanelLower } from '@components/RightPanelLower/RightPanelLower';
 import { CalendarComponent } from '@components/CalendarComponent/CalendarComponent';
 import { TimeSlotSelection } from '@components/TimeSlotSelection/TimeSlotSelection';
-
+import { ProfileDropdown } from '@components/ProfileDropdown/ProfileDropdown';
 import { calVisibilityState } from '@src/store/CalVisibilityState';
 
 import './Calendar.scss';
@@ -24,6 +24,7 @@ export const Calendar = () => {
         <Grid item xs={6} md={9}>
           <Container className="Calendarv">
             <UserInfoCard />
+            <ProfileDropdown/>
             <br />
             <h2 className="calendar__title">Plan a meeting</h2>
             {calVisibility ? (
