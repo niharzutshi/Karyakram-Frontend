@@ -14,17 +14,19 @@ import { ProfileDropdown } from '@components/ProfileDropdown/ProfileDropdown';
 import { calVisibilityState } from '@src/store/CalVisibilityState';
 
 import './Calendar.scss';
+import { margin } from '@mui/system';
 
 export const Calendar = () => {
   const [calVisibility, setCalVisibility] = useRecoilState(calVisibilityState);
 
   return (
     <Box sx={{ flexGrow: 1, padding: 5 }}>
+      <ProfileDropdown />
       <Grid container spacing={2}>
         <Grid item xs={6} md={9}>
           <Container className="Calendarv">
             <UserInfoCard />
-            <ProfileDropdown/>
+            
             <br />
             <h2 className="calendar__title">Plan a meeting</h2>
             {calVisibility ? (
