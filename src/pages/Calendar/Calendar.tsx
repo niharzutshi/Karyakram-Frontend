@@ -10,46 +10,51 @@ import { RightPanelUpper } from "@components/RightPanelUpper/RightPanelUpper";
 import { RightPanelLower } from "@components/RightPanelLower/RightPanelLower";
 import { CalendarComponent } from "@components/CalendarComponent/CalendarComponent";
 import { TimeSlotSelection } from "@components/TimeSlotSelection/TimeSlotSelection";
-import { ProfileDropdown } from "@components/ProfileDropdown/ProfileDropdown";
 import { calVisibilityState } from "@src/store/CalVisibilityState";
 
 import "./Calendar.scss";
-import { margin } from "@mui/system";
+import { Button } from "@mui/material";
 
 export const Calendar = () => {
   const [calVisibility, setCalVisibility] = useRecoilState(calVisibilityState);
 
   return (
-    <Box sx={{ flexGrow: 1, padding: 5 }}>
-      <ProfileDropdown />
+    <Box sx={{ flexGrow: 1, paddingLeft: 5, paddingRight: 5 }}>
       <Grid container spacing={2}>
         <Grid item xs={6} md={9}>
           <Container className="Calendarv">
             <UserInfoCard />
-
-            <br />
-            <h2 className="calendar__title">Plan a meeting</h2>
             {calVisibility ? (
-              <Grid container>
-                <Grid item xs={8}>
-                  <CalendarComponent />
+              <>
+                <Grid container>
+                  <Grid item xs={8}>
+                    <CalendarComponent />
+                  </Grid>
+                  <Grid item xs={4} marginLeft="-40px">
+                    <TimeSlotSelection instances={9} />
+                  </Grid>
                 </Grid>
-                <Grid item xs={4}>
-                  <TimeSlotSelection instances={5} />
-                </Grid>
-              </Grid>
+                <Box display="flex" justifyContent="flex-end">
+                  <Button
+                    className="calendar__proceed-button"
+                    onClick={() => setCalVisibility(!calVisibility)}
+                  >
+                    {calVisibility ? ">" : "<"}
+                  </Button>
+                </Box>
+              </>
             ) : (
               <PlanMeeting />
             )}
-            <button
-              className="calendar__proceed-button"
-              onClick={() => setCalVisibility(!calVisibility)}
-            >
-              {calVisibility ? ">" : "<"}
-            </button>
           </Container>
         </Grid>
-        <Grid item xs={4} md={3}>
+        <Grid
+          mt={6.5}
+          item
+          xs={4}
+          md={3}
+          display={{ lg: "block", sm: "none", md: "none" }}
+        >
           <RightPanelUpper />
           <RightPanelLower />
         </Grid>
