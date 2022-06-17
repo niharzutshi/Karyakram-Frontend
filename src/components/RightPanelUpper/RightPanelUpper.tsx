@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import "./RightPanelUpper.scss";
 
 import { ExpandableCard } from "@components/ExpandableCard/ExpandableCard";
+import { Typography } from "@mui/material";
 
 export const RightPanelUpper = () => {
   return (
@@ -16,9 +17,12 @@ export const RightPanelUpper = () => {
         backgroundColor: "#242424",
         borderRadius: "25px",
         width: "350px",
-        marginTop: 8,
+        overFlowY: "scroll",
+        alignItems: "center",
+        paddingTop: 2,
       }}
     >
+      <Typography variant="h5">Events For You</Typography>
       <ExpandableCard color="#800C83" width="100%" />
       <ExpandableCard color="#800C83" width="100%" />
       <ExpandableCard color="#800C83" width="100%" />

@@ -47,7 +47,9 @@ export const EventCard = () => {
             Bio
           </Typography>
         </Box>
-        <Button className="right-panel__button">Register</Button>
+        <Button className="right-panel__button" style={{ width: "200px" }}>
+          <Typography fontSize={13}>Register</Typography>
+        </Button>
       </Box>
     </CardContent>
   );

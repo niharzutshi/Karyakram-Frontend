@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 
 import "./RightPanelLower.scss";
 import { EventCard } from "@components/EventCard/EventCard";
+import { Typography } from "@mui/material";
 
 export const RightPanelLower = () => {
   return (
@@ -14,10 +15,13 @@ export const RightPanelLower = () => {
         backgroundColor: "#242424",
         borderRadius: "25px",
         width: "350px",
-        marginTop: 10,
+        marginTop: 2,
+        justifyContent: "center",
+        alignItems: "center",
+        paddingTop: 2,
       }}
     >
-      <EventCard />
+      <Typography variant="h5">Events For You</Typography>
       <EventCard />
       <EventCard />
     </Box>

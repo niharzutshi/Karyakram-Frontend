@@ -19,7 +19,7 @@ export const Calendar = () => {
   const [calVisibility, setCalVisibility] = useRecoilState(calVisibilityState);
 
   return (
-    <Box sx={{ flexGrow: 1, paddingLeft: 5 }}>
+    <Box sx={{ flexGrow: 1, paddingLeft: 5, paddingRight: 5 }}>
       <Grid container spacing={2}>
         <Grid item xs={6} md={9}>
           <Container className="Calendarv">
@@ -49,6 +49,7 @@ export const Calendar = () => {
           </Container>
         </Grid>
         <Grid
+          mt={6.5}
           item
           xs={4}
           md={3}
