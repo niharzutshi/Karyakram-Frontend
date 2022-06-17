@@ -1,33 +1,33 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import React from 'react';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardContent';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import React from "react";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardContent";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
-import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import ButtonBase from '@mui/material/ButtonBase';
+import { styled } from "@mui/material/styles";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import ButtonBase from "@mui/material/ButtonBase";
 
-const Img = styled('img')({
-  margin: 'auto',
-  display: 'block',
-  maxWidth: '100%',
-  maxHeight: '100%'
+const Img = styled("img")({
+  margin: "auto",
+  display: "block",
+  maxWidth: "100%",
+  maxHeight: "100%",
 });
 export const EventDescription = () => {
   return (
-    <Grid container spacing={2} sx={{marginTop:'10px'}}>
+    <Grid container spacing={2} sx={{ marginTop: "10px" }}>
       <Grid item>
         <ButtonBase sx={{}}>
           <Img
             sx={{
-              height: '100px',
-              width: '100px',
-              borderRadius: '360px',
-              border: '5px solid #800C83'
+              height: "100px",
+              width: "100px",
+              borderRadius: "360px",
+              border: "5px solid #800C83",
             }}
             alt="complex"
             src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg"
@@ -40,7 +40,8 @@ export const EventDescription = () => {
             <Typography
               variant="h5"
               component="div"
-              sx={{ alignItems: 'center', justifyContent: 'center' }}>
+              sx={{ alignItems: "center", justifyContent: "center" }}
+            >
               UserName
             </Typography>
           </Grid>
@@ -49,30 +50,32 @@ export const EventDescription = () => {
           <Button
             variant="contained"
             sx={{
-              marginRight: '15px',
-              borderRadius: '10px',
-              backgroundColor: '#800C83',
-              textTransform: 'none',
-              color: 'white',
-              '&:hover': {
-                backgroundColor: 'white',
-                color: 'black'
-              }
-            }}>
+              marginRight: "15px",
+              borderRadius: "10px",
+              backgroundColor: "#800C83",
+              textTransform: "none",
+              color: "white",
+              "&:hover": {
+                backgroundColor: "white",
+                color: "black",
+              },
+            }}
+          >
             Register
           </Button>
           <Button
             variant="contained"
             sx={{
-              borderRadius: '10px',
-              backgroundColor: '#800C83',
-              textTransform: 'none',
-              color: 'white',
-              '&:hover': {
-                backgroundColor: 'white',
-                color: 'black'
-              }
-            }}>
+              borderRadius: "10px",
+              backgroundColor: "#800C83",
+              textTransform: "none",
+              color: "white",
+              "&:hover": {
+                backgroundColor: "white",
+                color: "black",
+              },
+            }}
+          >
             Submit
           </Button>
         </Grid>

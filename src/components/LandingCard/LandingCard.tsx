@@ -1,19 +1,18 @@
-import * as React from 'react';
-import Grid from '@mui/material/Grid';
+import * as React from "react";
+import Grid from "@mui/material/Grid";
 
-import './LandingCard.scss';
-import { LandingInfo } from '@components/LandingInfo/LandingInfo';
+import "./LandingCard.scss";
+import { LandingInfo } from "@components/LandingInfo/LandingInfo";
 export const LandingCard = () => {
   return (
     <div className="landing-card__container">
-      <Grid container spacing={0} sx={{ marginLeft: '80px' }}>
+      <Grid container spacing={0} sx={{ marginLeft: "80px" }}>
         <Grid xs={7}>
           <LandingInfo />
         </Grid>
-        
+
         <Grid xs={4}>
           <div className="landing-card__picture-container">
-            
             <img
               className="landing-card__picture"
               src="https://i.imgur.com/iqukoXx.png"

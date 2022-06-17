@@ -1,24 +1,24 @@
-import React from 'react';
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useRecoilValue } from 'recoil';
+import React from "react";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useRecoilValue } from "recoil";
 
-import { Dasboard } from '@pages/Dashboard/Dashboard';
-import { LandingPage } from '@pages/LandingPage/LandingPage';
-import { Trending } from '@pages/Trending/Trending';
-import { Event } from '@pages/Event/Event';
-import { Calendar } from '@pages/Calendar/Calendar';
-import { User } from '@pages/User/User';
-import { Notifications } from '@pages/Notifications/Notifications';
+import { Dasboard } from "@pages/Dashboard/Dashboard";
+import { LandingPage } from "@pages/LandingPage/LandingPage";
+import { Trending } from "@pages/Trending/Trending";
+import { Event } from "@pages/Event/Event";
+import { Calendar } from "@pages/Calendar/Calendar";
+import { User } from "@pages/User/User";
+import { Notifications } from "@pages/Notifications/Notifications";
 
-import { Sidebar } from '@components/Sidebar/Sidebar';
+import { Sidebar } from "@components/Sidebar/Sidebar";
 
-import { darkThemeSelectedState } from './store/DarkThemeSelectedState';
-import { userAuthState } from './store/UserAuthState';
+import { darkThemeSelectedState } from "./store/DarkThemeSelectedState";
+import { userAuthState } from "./store/UserAuthState";
 
-import { darkTheme, lightTheme } from './theme';
+import { darkTheme, lightTheme } from "./theme";
 
-import './App.scss';
+import "./App.scss";
 
 export const App = () => {
   const darkThemeSelected = useRecoilValue(darkThemeSelectedState);
@@ -28,7 +28,7 @@ export const App = () => {
       <CssBaseline />
       <Router>
         <div className="App">
-          {userAuthenticated ? <Sidebar /> : ''}
+          {userAuthenticated ? <Sidebar /> : ""}
           <div className="main-area">
             <Routes>
               {!userAuthenticated ? (

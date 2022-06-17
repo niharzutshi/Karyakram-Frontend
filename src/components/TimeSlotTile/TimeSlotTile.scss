@@ -1,14 +1,14 @@
 .time-slot {
-    &__container {
-        border: 3px solid #9F65FF;
-        border-radius: 10px;
-        padding: 5px;
-        color: #9F65FF;
-        text-align: center;
-        cursor: pointer;
-        min-width: 150px;
-    }
-    &__container:hover {
-        background-color: #DFCECE;
-    }
+  &__container {
+    border: 3px solid #9f65ff;
+    border-radius: 10px;
+    padding: 5px;
+    color: #9f65ff;
+    text-align: center;
+    cursor: pointer;
+    min-width: 150px;
+  }
+  &__container:hover {
+    background-color: #dfcece;
+  }
 }
