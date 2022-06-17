@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
-import IconButton from '@mui/material/IconButton';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import FaceIcon from '@mui/icons-material/Face';
+import React, { useState } from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import Collapse from "@mui/material/Collapse";
+import IconButton from "@mui/material/IconButton";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import FaceIcon from "@mui/icons-material/Face";
 
-import './ExpandableCard.scss';
+import "./ExpandableCard.scss";
 
 const ExpandedContent = () => {
   return (
@@ -33,8 +33,8 @@ interface ExpandableCardProps {
 }
 
 export const ExpandableCard: React.FC<ExpandableCardProps> = ({
-  color = '#644BAB',
-  width = '345px'
+  color = "#644BAB",
+  width = "345px",
 }) => {
   const [expanded, setExpanded] = useState(false);
   const [rotateChevron, setRotateChevron] = useState(false);
@@ -45,18 +45,22 @@ export const ExpandableCard: React.FC<ExpandableCardProps> = ({
       className="expandable-card__container"
       sx={{
         width: width,
-        backgroundColor: color
-      }}>
+        backgroundColor: color,
+      }}
+    >
       <CardActions disableSpacing>
         <IconButton
           onClick={() => {
             setExpanded(!expanded);
             handleRotate();
           }}
-          aria-expanded={expanded}>
+          aria-expanded={expanded}
+        >
           <ExpandMoreIcon
             fontSize="medium"
-            className={`expandable-card__chevron ${rotateChevron ? 'rotate' : ''}`}
+            className={`expandable-card__chevron ${
+              rotateChevron ? "rotate" : ""
+            }`}
           />
         </IconButton>
         <div className="expandable-card__details">

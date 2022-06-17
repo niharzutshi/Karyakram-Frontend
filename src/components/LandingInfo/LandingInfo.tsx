@@ -1,12 +1,13 @@
-import React from 'react';
-import { useRecoilState } from 'recoil';
+import React from "react";
+import { useRecoilState } from "recoil";
 
-import { userAuthState } from '@src/store/UserAuthState';
+import { userAuthState } from "@src/store/UserAuthState";
 
-import './LandingInfo.scss';
+import "./LandingInfo.scss";
 
 export const LandingInfo = () => {
-  const [userAuthenticated, setUserAuthenticated] = useRecoilState(userAuthState);
+  const [userAuthenticated, setUserAuthenticated] =
+    useRecoilState(userAuthState);
   return (
     <div className="landing-info__container">
       <div className="landing-info__text">
@@ -18,9 +19,14 @@ export const LandingInfo = () => {
         <br />
         Plan Meetings
       </div>
-      <button className="landing-info__button" onClick={() => {
+      <button
+        className="landing-info__button"
+        onClick={() => {
           setUserAuthenticated(!userAuthenticated);
-        }}>Get Started</button>
+        }}
+      >
+        Get Started
+      </button>
       <img
         src="https://i.imgur.com/YuUnLZS.png"
         alt="astronaut2"
