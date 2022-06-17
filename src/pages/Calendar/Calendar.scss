@@ -1,5 +1,5 @@
 .Calendarv {
-  margin-top: 10vh;
+  margin-top: 7vh;
   background-color: #242424;
   min-height: 80vh;
   border-radius: 25px;
@@ -19,13 +19,13 @@
     margin: 0 0 25px 25px;
   }
   &__proceed-button {
-    border: none;
-    background-color: #5b155d;
-    border-radius: 10px;
-    min-width: 50px;
-    min-height: 50px;
-    color: white;
-    font-size: larger;
-    cursor: pointer;
+    border: none !important;
+    background-color: #5b155d !important;
+    border-radius: 10px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    color: white !important;
+    font-size: larger !important;
+    cursor: pointer !important;
   }
 }

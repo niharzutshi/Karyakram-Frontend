@@ -1,18 +1,25 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
 export const UserInfoCard = () => {
   return (
-    <Card sx={{ display: "flex", backgroundColor: "242424", color: "white" }}>
+    <Box
+      sx={{
+        display: "flex",
+        backgroundColor: "#242424",
+        color: "white",
+        marginTop: "-30px",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
           flexDirection: "row",
-          backgroundColor: "242424",
+          backgroundColor: "#242424",
+          border: "none",
         }}
       >
         <CardContent sx={{ flex: "1 0 auto" }}>
@@ -36,7 +43,7 @@ export const UserInfoCard = () => {
             padding: "15px",
             pl: 1,
             pb: 1,
-            backgroundColor: "800C83",
+            backgroundColor: "#242424",
             color: "white",
           }}
         >
@@ -52,6 +59,6 @@ export const UserInfoCard = () => {
           </Typography>
         </Box>
       </Box>
-    </Card>
+    </Box>
   );
 };

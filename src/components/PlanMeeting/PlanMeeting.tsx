@@ -10,8 +10,11 @@ import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import "./PlanMeeting.scss";
+import { calVisibilityState } from "@src/store/CalVisibilityState";
+import { useRecoilState } from "recoil";
 
 export const PlanMeeting = () => {
+  const [calVisibility, setCalVisibility] = useRecoilState(calVisibilityState);
   return (
     <Box
       sx={{
@@ -21,15 +24,7 @@ export const PlanMeeting = () => {
         marginLeft: 2,
       }}
     >
-      <Typography component="div" variant="h5">
-        Plan a Meeting
-      </Typography>
-      <Grid
-        container
-        rowSpacing={1}
-        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-        sx={{ marginTop: "30px" }}
-      >
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={6}>
           <Box
             sx={{
@@ -41,11 +36,9 @@ export const PlanMeeting = () => {
             <CalendarTodayOutlinedIcon
               sx={{ color: "#800C83", transform: "scale(1.8)" }}
             />
-            {/*@ts-ignore*/}
             <Typography
               component="div"
-              variant="h7"
-              sx={{ marginLeft: "13px" }}
+              sx={{ marginLeft: "13px", cursor: "default" }}
             >
               26 Thursday, February, 2022
             </Typography>
@@ -62,11 +55,9 @@ export const PlanMeeting = () => {
             <AccessTimeOutlinedIcon
               sx={{ color: "#800C83", transform: "scale(1.8)" }}
             />
-            {/*@ts-ignore*/}
             <Typography
               component="div"
-              variant="h7"
-              sx={{ marginLeft: "13px" }}
+              sx={{ marginLeft: "13px", cursor: "default" }}
             >
               2:30 - 3:00 pm
             </Typography>
@@ -98,10 +89,12 @@ export const PlanMeeting = () => {
             placeholder="Add information here that would help other to join "
             style={{
               width: "100vh",
-              backgroundColor: "lightgrey",
+              backgroundColor: "#3F3F3F",
+              border: "none",
               color: "white",
-              borderRadius: 25,
+              borderRadius: 8,
               padding: 12,
+              marginLeft: "15px",
             }}
           />
         </Box>
@@ -110,12 +103,20 @@ export const PlanMeeting = () => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
           backgroundColor: "#242424",
-          justifyContent: "right",
+          justifyContent: "space-between",
           marginTop: 2,
+          marginLeft: "-8px",
         }}
       >
+        <Box display="flex" justifyContent="flex-start">
+          <Button
+            className="calendar__proceed-button"
+            onClick={() => setCalVisibility(!calVisibility)}
+          >
+            {calVisibility ? ">" : "<"}
+          </Button>
+        </Box>
         <Button
           variant="contained"
           sx={{ backgroundColor: "blueviolet" }}

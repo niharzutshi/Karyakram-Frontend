@@ -12,9 +12,18 @@ export const TimeSlotSelection: React.FC<TimeSlotSelectionProps> = ({
   instances,
 }) => {
   return (
-    <div className="time-slot-selection__container">
+    <div
+      className="time-slot-selection__container"
+      style={{
+        maxHeight: "310px",
+        overflowY: "scroll",
+        marginTop: "7px",
+        width: "230px",
+        marginLeft: "-15px",
+      }}
+    >
       <TimeSlotTile
-        time={"Set Duration"}
+        time={"Pick Time"}
         backColor={"#3F3F3F"}
         fontColor={"#D2D2D2"}
         noBorder={true}
