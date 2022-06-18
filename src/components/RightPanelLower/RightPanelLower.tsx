@@ -21,7 +21,9 @@ export const RightPanelLower = () => {
         paddingTop: 2,
       }}
     >
-      <Typography variant="h5">Events For You</Typography>
+      <Typography variant="h5" color="white" style={{ cursor: "default" }}>
+        Events For You
+      </Typography>
       <EventCard />
       <EventCard />
     </Box>
