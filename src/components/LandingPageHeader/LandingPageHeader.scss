@@ -1,58 +1,58 @@
 .landing-page-header {
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 50px 10px 20px;
-    }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px 10px 20px;
+  }
 
-    &__logo {
-        height: 35px;
-        width: 220px;
-    }
+  &__logo {
+    height: 35px;
+    width: 220px;
+  }
 
-    &__option {
-        font-weight: bold;
-        font-size: 20px;
-        color: #AF9DE0;
-        text-decoration: none;
+  &__option {
+    font-weight: bold;
+    font-size: 20px;
+    color: #af9de0;
+    text-decoration: none;
 
-        &-active {
-            font-weight: bold;
-            font-size: 20px;
-            text-decoration: none;
-            color: white;
-        }
+    &-active {
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+      color: white;
     }
+  }
 
-    &__button {
-        color: white;
-        margin: -20px 0 0 0;
-        line-height: 25px;
-        font-size: 15px;
-        font-weight: bold;
-        padding: 5px 20px 10px 20px;
-        background-color: #5B3F7F;
-        border: none;
-        border-radius: 0 0 12px 12px;
-    }
+  &__button {
+    color: white;
+    margin: -20px 0 0 0;
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 20px 10px 20px;
+    background-color: #5b3f7f;
+    border: none;
+    border-radius: 0 0 12px 12px;
+  }
 
-    &__login-button {
-        color: white;
-        margin: -20px 0 0 -180px;
-        line-height: 25px;
-        font-size: 15px;
-        font-weight: bold;
-        padding: 5px 20px 10px 20px;
-        background-color: #5B3F7F;
-        border: none;
-        border-radius: 0 0 12px 12px;
-    }
+  &__login-button {
+    color: white;
+    margin: -20px 0 0 -180px;
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 20px 10px 20px;
+    background-color: #5b3f7f;
+    border: none;
+    border-radius: 0 0 12px 12px;
+  }
 
-    &__button:hover {
-        cursor: pointer;
-    }
+  &__button:hover {
+    cursor: pointer;
+  }
 
-    &__login-button:hover {
-        cursor: pointer;
-    }
+  &__login-button:hover {
+    cursor: pointer;
+  }
 }

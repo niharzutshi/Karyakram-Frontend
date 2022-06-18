@@ -1,31 +1,31 @@
-.Calendarv{
-    margin-top: 10vh;
-    background-color: #242424;
-    min-height: 80vh;
-    border-radius: 25px;
-    margin-left: 1vh;
-    color: white;
-    padding: 50px;
-    display: flex;
-    display: flex; /* adjusted */
-    flex: 1;
-    margin-left: 0;
-    max-width: 100%;
-    width: 100%;
+.Calendarv {
+  margin-top: 7vh;
+  background-color: #242424;
+  min-height: 80vh;
+  border-radius: 25px;
+  margin-left: 1vh;
+  color: white;
+  padding: 50px;
+  display: flex;
+  display: flex; /* adjusted */
+  flex: 1;
+  margin-left: 0;
+  max-width: 100%;
+  width: 100%;
 }
 
 .calendar {
-    &__title {
-        margin: 0 0 25px 25px;
-    }
-    &__proceed-button {
-        border: none;
-        background-color: #5B155D;
-        border-radius: 10px;
-        min-width: 50px;
-        min-height: 50px;
-        color: white;
-        font-size: larger;
-        cursor: pointer;
-    }
+  &__title {
+    margin: 0 0 25px 25px;
+  }
+  &__proceed-button {
+    border: none !important;
+    background-color: #5b155d !important;
+    border-radius: 10px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    color: white !important;
+    font-size: larger !important;
+    cursor: pointer !important;
+  }
 }

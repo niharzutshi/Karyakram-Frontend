@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './TimeSlotTile.scss';
+import "./TimeSlotTile.scss";
 
 interface TimeSlotProps {
   time: string;
@@ -15,7 +15,7 @@ export const TimeSlotTile: React.FC<TimeSlotProps> = ({
   backColor,
   fontColor,
   noBorder,
-  cursorType
+  cursorType,
 }) => {
   return (
     <div
@@ -23,9 +23,10 @@ export const TimeSlotTile: React.FC<TimeSlotProps> = ({
       style={{
         color: fontColor,
         backgroundColor: backColor,
-        border: noBorder ? 'none' : '',
-        cursor: cursorType
-      }}>
+        border: noBorder ? "none" : "",
+        cursor: cursorType,
+      }}
+    >
       {time}
     </div>
   );

@@ -1,10 +1,10 @@
-import React from 'react';
-import Card from '@mui/material/Card';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import CancelIcon from '@mui/icons-material/Cancel';
+import React from "react";
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import CancelIcon from "@mui/icons-material/Cancel";
 
-import './NotificationCard.scss';
+import "./NotificationCard.scss";
 
 interface NotificationCardProps {
   // 1 = upcoming event / some update
@@ -14,19 +14,23 @@ interface NotificationCardProps {
   title: string;
 }
 
-export const NotificationCard: React.FC<NotificationCardProps> = ({ type, title }) => {
+export const NotificationCard: React.FC<NotificationCardProps> = ({
+  type,
+  title,
+}) => {
   return (
     <Card
       className="notification-card__container"
       sx={{
-        height: '50px',
-        width: '900px',
-        backgroundColor: '#521853'
-      }}>
+        height: "50px",
+        width: "900px",
+        backgroundColor: "#521853",
+      }}
+    >
       <Box className="main-grid">
         <Grid item className="notification-card__details">
           <span className="notification-card__details-title">
-            {type === 1 ? 'Upcoming: ' : type === 2 ? 'Invite: ' : 'Reminder: '}
+            {type === 1 ? "Upcoming: " : type === 2 ? "Invite: " : "Reminder: "}
           </span>
           {title}
         </Grid>

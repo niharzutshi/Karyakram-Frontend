@@ -1,6 +1,6 @@
-import { atom } from 'recoil';
+import { atom } from "recoil";
 
 export const calVisibilityState = atom({
-  key: 'calVisibilityState',
-  default: true
+  key: "calVisibilityState",
+  default: true,
 });
