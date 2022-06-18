@@ -1,39 +1,19 @@
 import React from "react";
-import DarkModeToggle from "react-dark-mode-toggle";
 import { useRecoilState } from "recoil";
 
 import { darkThemeSelectedState } from "@src/store/DarkThemeSelectedState";
 
 import DashboardGlobe from "@components/DashboardGlobe/DashboardGlobe";
 import { ExpandableCard } from "@components/ExpandableCard/ExpandableCard";
-import GlobalDate from "@components/GlobalDate/GlobalDate";
-import { SearchBar } from "@components/SearchBar/SearchBar";
 import { Box, Grid, Typography } from "@mui/material";
 
 import "./Dashboard.scss";
+import Navbar from "@components/Navbar/Navbar";
 
 export const Dasboard = () => {
-  const [darkThemeSelected, setDarkThemeSelected] = useRecoilState(
-    darkThemeSelectedState
-  );
   return (
     <Box display="block">
-      <Box
-        display="flex"
-        justifyContent="space-between"
-        mb={3}
-        mt={2}
-        pr={2}
-        alignItems="center"
-      >
-        <GlobalDate />
-        <SearchBar />
-        <DarkModeToggle
-          onChange={setDarkThemeSelected}
-          checked={darkThemeSelected}
-          size={80}
-        />
-      </Box>
+      <Navbar />
       <Grid container spacing={2}>
         <Grid item xs={8}>
           <Grid container>

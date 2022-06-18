@@ -28,7 +28,7 @@ export const App = () => {
       <CssBaseline />
       <Router>
         <div className="App">
-          {userAuthenticated ? <Sidebar /> : ""}
+          {userAuthenticated && <Sidebar />}
           <div className="main-area">
             <Routes>
               {!userAuthenticated ? (
