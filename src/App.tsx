@@ -1,5 +1,5 @@
 import React from "react";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 
@@ -28,7 +28,11 @@ export const App = () => {
       <CssBaseline />
       <Router>
         <div className="App">
-          {userAuthenticated && <Sidebar />}
+          {userAuthenticated && (
+            <Box display={{ xs: "none", sm: "none", lg: "block", md: "none" }}>
+              <Sidebar />
+            </Box>
+          )}
           <div className="main-area">
             <Routes>
               {!userAuthenticated ? (
@@ -44,11 +48,13 @@ export const App = () => {
             </Routes>
           </div>
         </div>
-        <img
-          src="https://i.imgur.com/ZBvrLmY.png"
-          alt="astronaut on planet"
-          className="astro-planet"
-        />
+        <Box display={{ xs: "none", sm: "none", lg: "block", md: "none" }}>
+          <img
+            src="https://i.imgur.com/ZBvrLmY.png"
+            alt="astronaut on planet"
+            className="astro-planet"
+          />
+        </Box>
       </Router>
     </ThemeProvider>
   );
