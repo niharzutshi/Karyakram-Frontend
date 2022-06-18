@@ -1,16 +1,16 @@
 import React from "react";
-import { TrendingCard } from "@components/TrendingCard/TrendingCard";
-import TrendingHighlight from "@components/TrendingHighlight/TrendingHighlight";
 import { Box, Button, Grid, Typography } from "@mui/material";
-import Navbar from "@components/Navbar/Navbar";
+
 import { RightPanelLower } from "@components/RightPanelLower/RightPanelLower";
 import { RightPanelUpper } from "@components/RightPanelUpper/RightPanelUpper";
+import { TrendingCard } from "@components/TrendingCard/TrendingCard";
+import TrendingHighlight from "@components/TrendingHighlight/TrendingHighlight";
+import HomeLayout from "@src/layouts/HomeLayout";
 
 export const Trending = () => {
   return (
-    <>
-      <Navbar />
-      <Grid container>
+    <HomeLayout>
+      <Grid container mt={2}>
         <Grid item md={9} pl={6}>
           <TrendingHighlight />
           <Box mt={4} display="flex" alignItems="center">
@@ -46,6 +46,6 @@ export const Trending = () => {
           <RightPanelLower />
         </Grid>
       </Grid>
-    </>
+    </HomeLayout>
   );
 };

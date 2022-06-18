@@ -2,12 +2,11 @@ import React from "react";
 
 import "./Notifications.scss";
 import { NotificationCard } from "@components/NotificationCard/NotificationCard";
-import Navbar from "@components/Navbar/Navbar";
+import HomeLayout from "@src/layouts/HomeLayout";
 
 export const Notifications = () => {
   return (
-    <>
-      <Navbar />
+    <HomeLayout>
       <div>
         <NotificationCard
           title={"Event xyz by organization name on date"}
@@ -22,6 +21,6 @@ export const Notifications = () => {
           type={3}
         />
       </div>
-    </>
+    </HomeLayout>
   );
 };

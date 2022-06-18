@@ -1,19 +1,15 @@
 import React from "react";
-import { useRecoilState } from "recoil";
-
-import { darkThemeSelectedState } from "@src/store/DarkThemeSelectedState";
+import { Box, Grid, Typography } from "@mui/material";
 
 import DashboardGlobe from "@components/DashboardGlobe/DashboardGlobe";
 import { ExpandableCard } from "@components/ExpandableCard/ExpandableCard";
-import { Box, Grid, Typography } from "@mui/material";
+import HomeLayout from "@src/layouts/HomeLayout";
 
 import "./Dashboard.scss";
-import Navbar from "@components/Navbar/Navbar";
 
 export const Dasboard = () => {
   return (
-    <Box display="block">
-      <Navbar />
+    <HomeLayout>
       <Grid container spacing={2}>
         <Grid item xs={8}>
           <Grid container>
@@ -43,6 +39,6 @@ export const Dasboard = () => {
           </Box>
         </Grid>
       </Grid>
-    </Box>
+    </HomeLayout>
   );
 };
