@@ -44,7 +44,7 @@ const TrendingDisplayCard: React.FC<TrendingDisplayCardProps> = () => {
         alignItems="center"
         textAlign="center"
       >
-        <Typography variant="h6" style={{ cursor: "default " }}>
+        <Typography variant="h6" color="white" style={{ cursor: "default " }}>
           Event Name
         </Typography>
         <Typography color="gray" style={{ cursor: "default " }}>

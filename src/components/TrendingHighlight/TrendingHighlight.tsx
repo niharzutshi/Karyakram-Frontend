@@ -9,7 +9,7 @@ const TrendingHighlight: React.FC<TrendingHighlightProps> = () => {
     <Box
       position="relative"
       border="8px solid #201C2C"
-      width="65%"
+      width="85%"
       height="250px"
     >
       <img
@@ -22,7 +22,7 @@ const TrendingHighlight: React.FC<TrendingHighlightProps> = () => {
           width: "100%",
         }}
       />
-      <Box position="absolute" left="75%" bottom={0} top="10%">
+      <Box position="absolute" left="85%" bottom={0} top="10%">
         <TrendingDisplayCard />
       </Box>
     </Box>

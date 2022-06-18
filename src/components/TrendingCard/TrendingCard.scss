@@ -1,11 +1,8 @@
 .trending-card {
   &__container {
-    margin: 50px;
-    padding: 0 0 10px 0;
     border-radius: none !important;
   }
   &__title {
-    padding: 0 0 0 15px !important;
     cursor: default !important;
   }
   &__register-button {
@@ -21,9 +18,12 @@
   }
   &__bookmark-button {
     padding: 5px !important;
+    padding-bottom: 5px !important;
     border: 3px solid #800c83 !important;
-    color: white !important;
     border-radius: 10px !important;
     text-transform: none !important;
   }
+}
+.trending-card-container > * {
+  margin-left: 20px;
 }
