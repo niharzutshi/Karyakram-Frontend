@@ -10,7 +10,7 @@ const TrendingDisplayCard: React.FC<TrendingDisplayCardProps> = () => {
       position="relative"
       display="block"
       bgcolor="#2D2D2D"
-      width="180px"
+      width="150px"
       margin="100px"
       borderRadius={6}
     >
@@ -33,17 +33,18 @@ const TrendingDisplayCard: React.FC<TrendingDisplayCardProps> = () => {
             borderRadius: "120px",
             margin: "30px auto 0",
             border: "4px solid #79507A",
+            objectFit: "cover",
           }}
         />
       </div>
       <Box
-        pt={6}
-        pb={3}
+        pt={5}
+        pb={2}
         justifyContent="center"
         alignItems="center"
         textAlign="center"
       >
-        <Typography variant="h5" style={{ cursor: "default " }}>
+        <Typography variant="h6" style={{ cursor: "default " }}>
           Event Name
         </Typography>
         <Typography color="gray" style={{ cursor: "default " }}>

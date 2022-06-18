@@ -1,13 +1,12 @@
 import React from "react";
 import { TrendingCard } from "@components/TrendingCard/TrendingCard";
-import TrendingDisplayCard from "@components/TrendingDisplayCard/TrendingDisplayCard";
+import TrendingHighlight from "@components/TrendingHighlight/TrendingHighlight";
+import { Box } from "@mui/material";
 
 export const Trending = () => {
   return (
-    <div>
-      Trending Events
-      <TrendingCard />
-      <TrendingDisplayCard />
-    </div>
+    <Box>
+      <TrendingHighlight />
+    </Box>
   );
 };
