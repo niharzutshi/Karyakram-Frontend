@@ -1,6 +1,7 @@
-import { atom } from 'recoil';
+import { atom } from "recoil";
 
 export const userAuthState = atom({
-  key: 'userAuthState',
-  default: localStorage.getItem('user-auth') ? true : false
+  key: "userAuthState",
+  // default: localStorage.getItem('user-auth') ? true : false
+  default: true,
 });
