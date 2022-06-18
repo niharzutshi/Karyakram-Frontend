@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSetRecoilState } from "recoil";
 
 import "./Notifications.scss";
 import { NotificationCard } from "@components/NotificationCard/NotificationCard";
 import HomeLayout from "@src/layouts/HomeLayout";
+import { selectedPageState } from "@src/store/selectedPageState";
 
 export const Notifications = () => {
+  const setSelectedPageState = useSetRecoilState(selectedPageState);
+
+  useEffect(() => {
+    setSelectedPageState({
+      selectedPage: "notifications",
+    });
+  }, []);
+
   return (
     <HomeLayout>
       <div>

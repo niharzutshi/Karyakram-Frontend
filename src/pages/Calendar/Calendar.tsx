@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 import { Button } from "@mui/material";
 
 import { PlanMeeting } from "@components/PlanMeeting/PlanMeeting";
@@ -12,12 +12,20 @@ import { RightPanelLower } from "@components/RightPanelLower/RightPanelLower";
 import { CalendarComponent } from "@components/CalendarComponent/CalendarComponent";
 import { TimeSlotSelection } from "@components/TimeSlotSelection/TimeSlotSelection";
 import { calVisibilityState } from "@src/store/CalVisibilityState";
+import { selectedPageState } from "@src/store/selectedPageState";
+import HomeLayout from "@src/layouts/HomeLayout";
 
 import "./Calendar.scss";
-import HomeLayout from "@src/layouts/HomeLayout";
 
 export const Calendar = () => {
   const [calVisibility, setCalVisibility] = useRecoilState(calVisibilityState);
+  const setSelectedPageState = useSetRecoilState(selectedPageState);
+
+  useEffect(() => {
+    setSelectedPageState({
+      selectedPage: "calendar",
+    });
+  }, []);
 
   return (
     <HomeLayout>

@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Grid, Typography } from "@mui/material";
+import { useSetRecoilState } from "recoil";
 
 import DashboardGlobe from "@components/DashboardGlobe/DashboardGlobe";
 import { ExpandableCard } from "@components/ExpandableCard/ExpandableCard";
 import HomeLayout from "@src/layouts/HomeLayout";
+import { selectedPageState } from "@src/store/selectedPageState";
 
 import "./Dashboard.scss";
 
 export const Dasboard = () => {
+  const setSelectedPageState = useSetRecoilState(selectedPageState);
+
+  useEffect(() => {
+    setSelectedPageState({
+      selectedPage: "home",
+    });
+  }, []);
+
   return (
     <HomeLayout>
       <Grid container spacing={2}>
