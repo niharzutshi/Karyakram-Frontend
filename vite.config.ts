@@ -1,5 +1,6 @@
 import path from "path";
 import { Alias, defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 import * as tsconfig from "./tsconfig.paths.json";
 
@@ -21,4 +22,5 @@ export default defineConfig({
   resolve: {
     alias: readAliasFromTsConfig(),
   },
+  plugins: [react()],
 });

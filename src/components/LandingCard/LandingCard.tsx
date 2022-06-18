@@ -7,11 +7,11 @@ export const LandingCard = () => {
   return (
     <div className="landing-card__container">
       <Grid container spacing={0} sx={{ marginLeft: "80px" }}>
-        <Grid xs={7}>
+        <Grid item xs={7}>
           <LandingInfo />
         </Grid>
 
-        <Grid xs={4}>
+        <Grid item xs={4}>
           <div className="landing-card__picture-container">
             <img
               className="landing-card__picture"

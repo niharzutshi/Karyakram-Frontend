@@ -10,9 +10,7 @@ export const SearchBar = () => {
   return (
     <div
       className={
-        !darkThemeActive
-          ? "search-bar__container-dark"
-          : "search-bar__container"
+        darkThemeActive ? "search-bar__container-dark" : "search-bar__container"
       }
     >
       <input

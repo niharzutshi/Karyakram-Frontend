@@ -7,8 +7,10 @@ $search-width: 500px;
     align-items: center;
     max-width: $search-width;
     margin: 20px;
-    background-color: #282828;
+    background-color: #281857;
+    color: white;
     border-radius: 12px;
+    border: none;
   }
   &__container-dark {
     display: flex;
@@ -16,10 +18,8 @@ $search-width: 500px;
     align-items: center;
     max-width: $search-width;
     margin: 20px;
-    background-color: white;
+    background-color: #282828;
     border-radius: 12px;
-    border: 2px solid black;
-    color: black !important;
   }
 
   &__element {
@@ -39,7 +39,7 @@ $search-width: 500px;
     padding: 10px 15px 10px 15px;
     outline: none;
     background-color: transparent;
-    color: black;
+    color: white;
     font-size: 15px;
     letter-spacing: 1px;
   }
