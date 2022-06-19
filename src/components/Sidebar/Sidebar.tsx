@@ -1,16 +1,21 @@
 import React from "react";
-import "./Sidebar.scss";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Drawer, List, ListItem, ListItemIcon } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
+import { useRecoilValue } from "recoil";
 
 import KaryakramIcon from "../../assets/images/K.svg";
+import "./Sidebar.scss";
+
+import { selectedPageState } from "@src/store/selectedPageState";
 
 export const Sidebar: React.FC = () => {
+  const selectedPage = useRecoilValue(selectedPageState).selectedPage;
   const navigate = useNavigate();
+
   return (
     <Drawer
       sx={{
@@ -35,6 +40,9 @@ export const Sidebar: React.FC = () => {
           alignItems="center"
           key="h"
           onClick={() => navigate("/")}
+          style={{
+            backgroundColor: selectedPage === "home" ? "#4D0A6D" : "",
+          }}
         >
           <Tooltip title="Home">
             <ListItemIcon className="karyakram-logo">
@@ -47,6 +55,9 @@ export const Sidebar: React.FC = () => {
           alignItems="center"
           key="n"
           onClick={() => navigate("/notifications")}
+          style={{
+            backgroundColor: selectedPage === "notifications" ? "#4D0A6D" : "",
+          }}
         >
           <Tooltip title="Notificaitons">
             <ListItemIcon>
@@ -59,6 +70,9 @@ export const Sidebar: React.FC = () => {
           alignItems="center"
           key="t"
           onClick={() => navigate("/trending")}
+          style={{
+            backgroundColor: selectedPage === "trending" ? "#4D0A6D" : "",
+          }}
         >
           <Tooltip title="Trending">
             <ListItemIcon>
@@ -71,6 +85,9 @@ export const Sidebar: React.FC = () => {
           alignItems="center"
           key="c"
           onClick={() => navigate("/calendar")}
+          style={{
+            backgroundColor: selectedPage === "calendar" ? "#4D0A6D" : "",
+          }}
         >
           <Tooltip title="Calendar">
             <ListItemIcon>
