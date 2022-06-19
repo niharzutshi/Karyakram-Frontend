@@ -12,12 +12,12 @@ export const TrendingCard = () => {
   return (
     <Card
       square={true}
-      sx={{ maxWidth: 230, maxHeight: 330 }}
+      sx={{ width: "200px", borderRadius: 1 }}
       className="trending-card__container"
     >
       <CardMedia
         component="img"
-        height="150"
+        height="90"
         image="https://i.imgur.com/n6pXXMg.png"
         alt="trending"
       />
@@ -30,10 +30,6 @@ export const TrendingCard = () => {
         >
           XYZ Organization
         </Typography>
-        {/* <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-          across all continents except Antarctica
-        </Typography> */}
       </CardContent>
       <CardActions>
         <Button size="small" className="trending-card__register-button">
