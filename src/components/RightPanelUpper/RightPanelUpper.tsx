@@ -2,16 +2,18 @@
 import React from "react";
 import Box from "@mui/material/Box";
 
-import "./RightPanelUpper.module.scss";
-
 import { ExpandableCard } from "../ExpandableCard/ExpandableCard";
 import { Typography } from "@mui/material";
+
+// @ts-ignore
+import style from "./RightPanelUpper.module.scss";
 
 export const RightPanelUpper = () => {
   return (
     <Box
-      className="right-panel__container"
+      className={style["right-panel__container"]}
       sx={{
+        padding: "20px",
         display: "flex",
         flexDirection: "column",
         backgroundColor: "#242424",

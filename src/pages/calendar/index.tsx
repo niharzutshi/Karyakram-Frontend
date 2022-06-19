@@ -7,10 +7,10 @@ import { Button } from "@mui/material";
 
 import { PlanMeeting } from "../../components/PlanMeeting/PlanMeeting";
 import { UserInfoCard } from "../../components/UserInfoCard/UserInfoCard";
-import { RightPanelUpper } from "../..//components/RightPanelUpper/RightPanelUpper";
-import { RightPanelLower } from "../..//components/RightPanelLower/RightPanelLower";
-import { CalendarComponent } from "../..//components/CalendarComponent/CalendarComponent";
-import { TimeSlotSelection } from "../..//components/TimeSlotSelection/TimeSlotSelection";
+import { RightPanelUpper } from "../../components/RightPanelUpper/RightPanelUpper";
+import { RightPanelLower } from "../../components/RightPanelLower/RightPanelLower";
+import { CalendarComponent } from "../../components/CalendarComponent/CalendarComponent";
+import { TimeSlotSelection } from "../../components/TimeSlotSelection/TimeSlotSelection";
 import { calVisibilityState } from "../../store/calVisibilityState";
 import { selectedPageState } from "../../store/selectedPageState";
 import HomeLayout from "../../layouts/HomeLayout";
@@ -34,7 +34,21 @@ const Calendar = () => {
       >
         <Grid container spacing={2}>
           <Grid item xs={6} md={9}>
-            <Container className="Calendarv">
+            <Container
+              style={{
+                marginTop: "7vh",
+                backgroundColor: "#242424",
+                minHeight: "80vh",
+                borderRadius: "25px",
+                marginLeft: "0",
+                color: "white",
+                padding: "50px",
+                display: "flex",
+                flex: "1",
+                maxWidth: "100%",
+                width: "100%",
+              }}
+            >
               <UserInfoCard />
               {calVisibility ? (
                 <>
@@ -48,7 +62,16 @@ const Calendar = () => {
                   </Grid>
                   <Box display="flex" justifyContent="flex-end">
                     <Button
-                      className="calendar__proceed-button"
+                      style={{
+                        border: "none !important",
+                        backgroundColor: "#5b155d !important",
+                        borderRadius: "10px !important",
+                        minWidth: "50px !important",
+                        minHeight: "50px !important",
+                        color: "white !important",
+                        fontSize: "larger !important",
+                        cursor: "pointer !important",
+                      }}
                       onClick={() => setCalVisibility(!calVisibility)}
                     >
                       {calVisibility ? ">" : "<"}

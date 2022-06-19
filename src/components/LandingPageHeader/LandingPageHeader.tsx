@@ -4,8 +4,6 @@ import React from "react";
 import Link from "next/link";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 
-import "./LandingPageHeader.module.scss";
-
 export const LandingPageHeader = () => {
   const setAuthModalState = useSetRecoilState(authModalState);
   const modalState = useRecoilValue(authModalState);
@@ -13,25 +11,68 @@ export const LandingPageHeader = () => {
   return (
     <>
       <AuthModal />
-      <div className="landing-page-header__container">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          padding: "20px 50px 10px 20px",
+        }}
+      >
         <Link href="/">
           <img
             src="https://i.imgur.com/HbgpwLa.png"
             alt="Karyakram Logo"
-            className="landing-page-header__logo"
+            style={{
+              height: "35px",
+              width: "220px",
+            }}
           />
         </Link>
-        <Link href="/" className="landing-page-header__option-active">
+        <Link
+          href="/"
+          style={{
+            fontWeight: "bold",
+            fontSize: "20px",
+            textDecoration: "none",
+            color: "white",
+          }}
+        >
           Home
         </Link>
-        <Link href="/trending" className="landing-page-header__option">
+        <Link
+          href="/trending"
+          style={{
+            fontWeight: "bold",
+            fontSize: "20px",
+            color: "#af9de0",
+            textDecoration: "none",
+          }}
+        >
           Discover
         </Link>
-        <Link href="/about" className="landing-page-header__option">
+        <Link
+          href="/about"
+          style={{
+            fontWeight: "bold",
+            fontSize: "20px",
+            color: "#af9de0",
+            textDecoration: "none",
+          }}
+        >
           About
         </Link>
         <button
-          className="head-button"
+          style={{
+            color: "white",
+            margin: "-20px 0 0 0",
+            lineHeight: "25px",
+            fontSize: "15px",
+            fontWeight: "bold",
+            padding: "5px 20px 10px 20px",
+            backgroundColor: "#5b3f7f",
+            border: "none",
+            borderRadius: "0 0 12px 12px",
+          }}
           onClick={() => {
             setAuthModalState({ open: true, view: "crypto" });
           }}
@@ -39,7 +80,17 @@ export const LandingPageHeader = () => {
           Connect <br /> Wallet
         </button>
         <button
-          className="landing-page-header__login-button"
+          style={{
+            color: "white",
+            margin: "-20px 0 0 -180px",
+            lineHeight: "25px",
+            fontSize: "15px",
+            fontWeight: "bold",
+            padding: "5px 20px 10px 20px",
+            backgroundColor: "#5b3f7f",
+            border: "none",
+            borderRadius: "0 0 12px 12px",
+          }}
           onClick={() => {
             setAuthModalState({ open: true, view: "login" });
           }}

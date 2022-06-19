@@ -27,7 +27,18 @@ const Event = () => {
           <Grid item xs={6} md={9} sx={{ background: "none" }}>
             <Grid container spacing={2}>
               <Grid item xs={8} sx={{ marginTop: "25px" }}>
-                <Container className="event-back">
+                <Container
+                  style={{
+                    width: "100%",
+                    marginTop: "5vh",
+                    backgroundColor: "#242424",
+                    minHeight: "80vh",
+                    borderRadius: "25px",
+                    marginLeft: "1vh",
+                    color: "white",
+                    padding: "5px",
+                  }}
+                >
                   <EventDescription />
                   <Container sx={{ marginTop: "28px" }}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

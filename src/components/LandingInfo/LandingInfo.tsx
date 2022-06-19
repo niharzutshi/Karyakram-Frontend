@@ -3,14 +3,29 @@ import { useRecoilState } from "recoil";
 
 import { userAuthState } from "../../store/userAuthState";
 
-import "./LandingInfo.module.scss";
-
 export const LandingInfo = () => {
   const [userAuthenticated, setUserAuthenticated] =
     useRecoilState(userAuthState);
   return (
-    <div className="landing-info__container">
-      <div className="landing-info__text">
+    <div
+      style={{
+        padding: "20px",
+        borderRadius: "20px",
+        backgroundImage: 'url("https://i.imgur.com/uzRn7vO.png")',
+        backgroundSize: "contain",
+        height: "500px",
+        width: "500px",
+        display: "block",
+      }}
+    >
+      <div
+        style={{
+          cursor: "default",
+          padding: "90px 0 0 20px",
+          fontWeight: "bold",
+          fontSize: "25px",
+        }}
+      >
         Link your Calendar
         <br />
         Check Availability
@@ -20,7 +35,17 @@ export const LandingInfo = () => {
         Plan Meetings
       </div>
       <button
-        className="landing-info__button"
+        style={{
+          color: "#49169c",
+          margin: "80px 0 0 20px",
+          borderRadius: "17px",
+          fontWeight: "bolder",
+          fontSize: "18px",
+          border: "none",
+          backgroundColor: "white",
+          padding: "10px 30px 10px 30px",
+          cursor: "pointer",
+        }}
         onClick={() => {
           setUserAuthenticated(!userAuthenticated);
         }}
@@ -30,7 +55,12 @@ export const LandingInfo = () => {
       <img
         src="https://i.imgur.com/YuUnLZS.png"
         alt="astronaut2"
-        className="landing-info__astronaut"
+        style={{
+          float: "right",
+          height: "200px",
+          width: "220px",
+          margin: "-100px 0 0 20px",
+        }}
       />
     </div>
   );

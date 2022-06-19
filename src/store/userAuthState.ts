@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 
-const defaultUserAuthState = true;
+const defaultUserAuthState = false;
 // typeof window !== undefined
 //   ? localStorage.getItem("user-auth")
 //     ? true
