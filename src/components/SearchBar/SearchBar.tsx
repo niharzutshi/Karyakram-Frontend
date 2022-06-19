@@ -2,8 +2,9 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { useRecoilValue } from "recoil";
 
-import { darkThemeSelectedState } from "../../store/DarkThemeSelectedState";
-import "./SearchBar.scss";
+import { darkThemeSelectedState } from "../../store/darkThemeSelectedState";
+
+import "./SearchBar.module.scss";
 
 export const SearchBar = () => {
   const darkThemeActive = useRecoilValue(darkThemeSelectedState);

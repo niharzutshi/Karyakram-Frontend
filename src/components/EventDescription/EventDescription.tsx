@@ -1,16 +1,14 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from "react";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardContent";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
 import ButtonBase from "@mui/material/ButtonBase";
+import img from "next/image";
 
+// @ts-ignore
 const Img = styled("img")({
   margin: "auto",
   display: "block",
@@ -22,8 +20,8 @@ export const EventDescription = () => {
     <Grid container spacing={2} sx={{ marginTop: "10px" }}>
       <Grid item>
         <ButtonBase sx={{}}>
-          <Img
-            sx={{
+          <img
+            style={{
               height: "100px",
               width: "100px",
               borderRadius: "360px",

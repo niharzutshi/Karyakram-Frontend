@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./TimeSlotTile.scss";
+import "./TimeSlotTile.module.scss";
 
 interface TimeSlotProps {
   time: string;

@@ -1,9 +1,10 @@
-import { darkThemeSelectedState } from "@src/store/DarkThemeSelectedState";
+import { darkThemeSelectedState } from "@src/store/darkThemeSelectedState";
 import React from "react";
-import Globe from "react-globe.gl";
+import dynamic from "next/dynamic";
 import { useRecoilValue } from "recoil";
 
 const DashboardGlobe: React.FC = () => {
+  const Globe = dynamic(import("react-globe.gl"), { ssr: false });
   const darkThemeSelected = useRecoilValue(darkThemeSelectedState);
   const imageUrlLight = "https://i.imgur.com/VQEaPar.png";
   const imageUrlDark = "https://i.imgur.com/Mv8PZBq.jpg";

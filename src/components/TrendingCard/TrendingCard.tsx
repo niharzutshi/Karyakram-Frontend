@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import "./TrendingCard.scss";
+import "./TrendingCard.module.scss";
 
 export const TrendingCard = () => {
   return (
@@ -16,6 +16,7 @@ export const TrendingCard = () => {
       className="trending-card__container"
     >
       <CardMedia
+        // @ts-ignore
         component="img"
         height="90"
         image="https://i.imgur.com/n6pXXMg.png"

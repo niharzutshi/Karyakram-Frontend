@@ -24,6 +24,7 @@ export const UserInfoCard = () => {
       >
         <CardContent sx={{ flex: "1 0 auto" }}>
           <CardMedia
+            // @ts-ignore
             component="img"
             sx={{
               width: 120,

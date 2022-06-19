@@ -1,8 +1,11 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
+import img from "next/image";
 
-import "./LandingCard.scss";
 import { LandingInfo } from "@components/LandingInfo/LandingInfo";
+
+import "./LandingCard.module.scss";
+
 export const LandingCard = () => {
   return (
     <div className="landing-card__container">

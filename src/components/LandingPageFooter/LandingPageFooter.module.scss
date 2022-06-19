@@ -1,0 +1,19 @@
+.landing-page-footer__container {
+  display: flex;
+  justify-content: center;
+}
+
+.landing-page-footer__option {
+  color: #af9de0;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+
+.landing-page-footer__option:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.landing-page-footer__separator {
+  color: #af9de0;
+}

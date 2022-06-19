@@ -1,9 +1,10 @@
 import React from "react";
 import { useRecoilState } from "recoil";
+import img from "next/image";
 
-import { userAuthState } from "@src/store/UserAuthState";
+import { userAuthState } from "@src/store/userAuthState";
 
-import "./LandingInfo.scss";
+import "./LandingInfo.module.scss";
 
 export const LandingInfo = () => {
   const [userAuthenticated, setUserAuthenticated] =

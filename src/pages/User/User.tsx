@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./User.scss";
+import "./User.module.scss";
 
 export const User = () => {
   return <div>User Profile</div>;

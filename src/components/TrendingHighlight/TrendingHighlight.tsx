@@ -1,6 +1,7 @@
 import TrendingDisplayCard from "@components/TrendingDisplayCard/TrendingDisplayCard";
 import { Box } from "@mui/material";
 import React from "react";
+import img from "next/image";
 
 type TrendingHighlightProps = {};
 

@@ -2,7 +2,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 
-import "./RightPanelLower.scss";
+import "./RightPanelLower.module.scss";
 import { EventCard } from "@components/EventCard/EventCard";
 import { Typography } from "@mui/material";
 

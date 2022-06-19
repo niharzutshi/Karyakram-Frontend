@@ -7,9 +7,9 @@ import { ExpandableCard } from "@components/ExpandableCard/ExpandableCard";
 import HomeLayout from "@src/layouts/HomeLayout";
 import { selectedPageState } from "@src/store/selectedPageState";
 
-import "./Dashboard.scss";
+import "./Dashboard.module.scss";
 
-export const Dasboard = () => {
+export const Dashboard = () => {
   const setSelectedPageState = useSetRecoilState(selectedPageState);
 
   useEffect(() => {

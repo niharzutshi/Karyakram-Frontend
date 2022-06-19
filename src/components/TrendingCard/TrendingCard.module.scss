@@ -1,0 +1,32 @@
+.trending-card__container {
+  border-radius: none !important;
+}
+
+.trending-card__title {
+  cursor: default !important;
+}
+
+.trending-card__register-button {
+  background-color: #800c83 !important;
+  padding: 8px !important;
+  color: white !important;
+  border-radius: 10px !important;
+  text-transform: none !important;
+  margin: 0 20px 0px 20px !important;
+}
+
+.trending-card__register-button:hover {
+  background-color: #c11fc7 !important;
+}
+
+.trending-card__bookmark-button {
+  padding: 5px !important;
+  padding-bottom: 5px !important;
+  border: 3px solid #800c83 !important;
+  border-radius: 10px !important;
+  text-transform: none !important;
+}
+
+.trending-card-container > * {
+  margin-left: 20px;
+}

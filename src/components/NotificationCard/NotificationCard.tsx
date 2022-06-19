@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import CancelIcon from "@mui/icons-material/Cancel";
 
-import "./NotificationCard.scss";
+import "./NotificationCard.module.scss";
 
 interface NotificationCardProps {
   // 1 = upcoming event / some update

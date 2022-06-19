@@ -2,7 +2,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 
-import "./RightPanelUpper.scss";
+import "./RightPanelUpper.module.scss";
 
 import { ExpandableCard } from "@components/ExpandableCard/ExpandableCard";
 import { Typography } from "@mui/material";
