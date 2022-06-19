@@ -5,6 +5,7 @@ import { darkThemeSelectedState } from "@src/store/DarkThemeSelectedState";
 import React from "react";
 import { useRecoilState } from "recoil";
 import DarkModeToggle from "react-dark-mode-toggle";
+import { ProfileDropdown } from "@components/ProfileDropdown/ProfileDropdown";
 
 type NavbarProps = {};
 
@@ -21,7 +22,12 @@ const Navbar: React.FC<NavbarProps> = () => {
       alignItems="center"
     >
       <GlobalDate />
-      <SearchBar />
+      <div style={{ paddingLeft: "200px" }}>
+        <SearchBar />
+      </div>
+      <div style={{ paddingLeft: "200px" }}>
+        <ProfileDropdown />
+      </div>
       <DarkModeToggle
         onChange={setDarkThemeSelected}
         checked={darkThemeSelected}

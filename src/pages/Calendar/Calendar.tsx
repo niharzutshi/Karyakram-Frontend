@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import { useRecoilState } from "recoil";
+import { Button } from "@mui/material";
 
 import { PlanMeeting } from "@components/PlanMeeting/PlanMeeting";
 import { UserInfoCard } from "@components/UserInfoCard/UserInfoCard";
@@ -13,15 +14,13 @@ import { TimeSlotSelection } from "@components/TimeSlotSelection/TimeSlotSelecti
 import { calVisibilityState } from "@src/store/CalVisibilityState";
 
 import "./Calendar.scss";
-import { Button } from "@mui/material";
-import Navbar from "@components/Navbar/Navbar";
+import HomeLayout from "@src/layouts/HomeLayout";
 
 export const Calendar = () => {
   const [calVisibility, setCalVisibility] = useRecoilState(calVisibilityState);
 
   return (
-    <>
-      <Navbar />
+    <HomeLayout>
       <Box
         sx={{ marginTop: -7.5, flexGrow: 1, paddingLeft: 5, paddingRight: 5 }}
       >
@@ -65,6 +64,6 @@ export const Calendar = () => {
           </Grid>
         </Grid>
       </Box>
-    </>
+    </HomeLayout>
   );
 };
