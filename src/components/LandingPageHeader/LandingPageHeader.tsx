@@ -1,5 +1,5 @@
-import { AuthModal } from "@/components/AuthModal/AuthModal";
-import { authModalState } from "@/src/store/authModalState";
+import { AuthModal } from "../AuthModal/AuthModal";
+import { authModalState } from "../../store/authModalState";
 import React from "react";
 import Link from "next/link";
 import { useRecoilValue, useSetRecoilState } from "recoil";

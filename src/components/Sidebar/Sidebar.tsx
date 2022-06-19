@@ -8,7 +8,7 @@ import { useRecoilValue } from "recoil";
 
 // import "./Sidebar.module.scss";
 
-import { selectedPageState } from "@/src/store/selectedPageState";
+import { selectedPageState } from "../../store/selectedPageState";
 import { useRouter } from "next/router";
 
 export const Sidebar: React.FC = () => {

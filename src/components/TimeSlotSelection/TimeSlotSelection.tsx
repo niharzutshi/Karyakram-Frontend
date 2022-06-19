@@ -1,6 +1,6 @@
 import React from "react";
 
-import { TimeSlotTile } from "@/components/TimeSlotTile/TimeSlotTile";
+import { TimeSlotTile } from "../TimeSlotTile/TimeSlotTile";
 
 import "./TimeSlotSelection.module.scss";
 

@@ -1,6 +1,5 @@
 import { Button, Box, Typography } from "@mui/material";
 import React from "react";
-import img from "next/image";
 
 // import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 

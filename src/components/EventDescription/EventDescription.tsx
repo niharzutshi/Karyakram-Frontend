@@ -2,11 +2,9 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import ButtonBase from "@mui/material/ButtonBase";
-import img from "next/image";
 
 // @ts-ignore
 const Img = styled("img")({

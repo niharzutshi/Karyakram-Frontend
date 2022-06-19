@@ -1,8 +1,7 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
-import img from "next/image";
 
-import { LandingInfo } from "@/components/LandingInfo/LandingInfo";
+import { LandingInfo } from "../LandingInfo/LandingInfo";
 
 import "./LandingCard.module.scss";
 

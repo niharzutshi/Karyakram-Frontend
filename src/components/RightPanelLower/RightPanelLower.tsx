@@ -3,7 +3,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 
 import "./RightPanelLower.module.scss";
-import { EventCard } from "@/components/EventCard/EventCard";
+import { EventCard } from "../EventCard/EventCard";
 import { Typography } from "@mui/material";
 
 export const RightPanelLower = () => {
