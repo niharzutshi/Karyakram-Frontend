@@ -3,8 +3,8 @@ import { useSetRecoilState } from "recoil";
 
 import "./Notifications.module.scss";
 import { NotificationCard } from "@components/NotificationCard/NotificationCard";
-import HomeLayout from "@src/layouts/HomeLayout";
-import { selectedPageState } from "@src/store/selectedPageState";
+import HomeLayout from "@/src/layouts/HomeLayout";
+import { selectedPageState } from "@/src/store/selectedPageState";
 
 const Notifications = () => {
   const setSelectedPageState = useSetRecoilState(selectedPageState);

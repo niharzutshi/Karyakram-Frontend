@@ -1,4 +1,4 @@
-import { darkThemeSelectedState } from "@src/store/darkThemeSelectedState";
+import { darkThemeSelectedState } from "@/src/store/darkThemeSelectedState";
 import React from "react";
 import dynamic from "next/dynamic";
 import { useRecoilValue } from "recoil";

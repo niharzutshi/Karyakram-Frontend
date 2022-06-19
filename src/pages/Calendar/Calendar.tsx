@@ -11,9 +11,9 @@ import { RightPanelUpper } from "@components/RightPanelUpper/RightPanelUpper";
 import { RightPanelLower } from "@components/RightPanelLower/RightPanelLower";
 import { CalendarComponent } from "@components/CalendarComponent/CalendarComponent";
 import { TimeSlotSelection } from "@components/TimeSlotSelection/TimeSlotSelection";
-import { calVisibilityState } from "@src/store/calVisibilityState";
-import { selectedPageState } from "@src/store/selectedPageState";
-import HomeLayout from "@src/layouts/HomeLayout";
+import { calVisibilityState } from "@/src/store/calVisibilityState";
+import { selectedPageState } from "@/src/store/selectedPageState";
+import HomeLayout from "@/src/layouts/HomeLayout";
 
 import "./Calendar.module.scss";
 

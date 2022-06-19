@@ -1,5 +1,5 @@
 import { Box, Button, Input, Typography } from "@mui/material";
-import { authModalState } from "@src/store/authModalState";
+import { authModalState } from "@/src/store/authModalState";
 import React from "react";
 import { useRecoilState } from "recoil";
 

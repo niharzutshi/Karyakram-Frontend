@@ -1,4 +1,4 @@
-import Navbar from "@src/layouts/Navbar";
+import Navbar from "@/src/layouts/Navbar";
 import React, { PropsWithChildren } from "react";
 
 type HomeLayoutProps = {

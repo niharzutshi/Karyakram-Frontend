@@ -96,15 +96,20 @@
     "skipLibCheck": false /* Skip type checking all .d.ts files. */,
     "incremental": true
   },
-  "include": [
-    "src"
-  ],
+  "include": ["src"],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"],
+  "baseUrl": ".",
+  "paths": {
+    "@components/*": ["src/components/*"],
+    "@pages/*": ["src/pages/*"],
+    "@/src/*": ["src/*"],
+    "@shared": ["src/shared/*"],
+    "@store": ["src/store/*"],
+    "@assets": ["src/assets/*"]
+  }
 }

@@ -4,8 +4,8 @@ import { useSetRecoilState } from "recoil";
 
 import DashboardGlobe from "@components/DashboardGlobe/DashboardGlobe";
 import { ExpandableCard } from "@components/ExpandableCard/ExpandableCard";
-import HomeLayout from "@src/layouts/HomeLayout";
-import { selectedPageState } from "@src/store/selectedPageState";
+import HomeLayout from "@/src/layouts/HomeLayout";
+import { selectedPageState } from "@/src/store/selectedPageState";
 
 import "./Dashboard.module.scss";
 

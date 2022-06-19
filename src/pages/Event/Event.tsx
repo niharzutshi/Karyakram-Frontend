@@ -15,7 +15,7 @@ import Button from "@mui/material/Button";
 import { EventDescription } from "@components/EventDescription/EventDescription";
 import { RightPanelUpper } from "@components/RightPanelUpper/RightPanelUpper";
 import { RightPanelLower } from "@components/RightPanelLower/RightPanelLower";
-import HomeLayout from "@src/layouts/HomeLayout";
+import HomeLayout from "@/src/layouts/HomeLayout";
 
 import "./Event.module.scss";
 
