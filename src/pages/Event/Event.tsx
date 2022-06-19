@@ -19,7 +19,7 @@ import HomeLayout from "@src/layouts/HomeLayout";
 
 import "./Event.module.scss";
 
-export const Event = () => {
+const Event = () => {
   return (
     <HomeLayout>
       <Box sx={{ flexGrow: 1, background: "none" }}>
@@ -148,3 +148,5 @@ export const Event = () => {
     </HomeLayout>
   );
 };
+
+export default Event;

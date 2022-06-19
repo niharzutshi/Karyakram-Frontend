@@ -5,9 +5,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Drawer, List, ListItem, ListItemIcon } from "@mui/material";
 import Tooltip from "@mui/material/Tooltip";
 import { useRecoilValue } from "recoil";
-import img from "next/image";
 
-import KaryakramIcon from "../../assets/images/K.svg";
 // import "./Sidebar.module.scss";
 
 import { selectedPageState } from "@src/store/selectedPageState";
@@ -47,7 +45,7 @@ export const Sidebar: React.FC = () => {
         >
           <Tooltip title="Home">
             <ListItemIcon className="karyakram-logo">
-              <img src={KaryakramIcon} />
+              <img src={"../../assets/images/K.svg"} />
             </ListItemIcon>
           </Tooltip>
         </ListItem>

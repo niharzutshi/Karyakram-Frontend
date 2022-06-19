@@ -2,6 +2,8 @@ import React from "react";
 
 import "./User.module.scss";
 
-export const User = () => {
+const User = () => {
   return <div>User Profile</div>;
 };
+
+export default User;

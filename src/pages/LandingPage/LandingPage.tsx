@@ -8,7 +8,7 @@ import { LandingPageFooter } from "@components/LandingPageFooter/LandingPageFoot
 
 import "./LandingPage.module.scss";
 
-export const LandingPage = () => {
+const LandingPage = () => {
   return (
     <Box sx={{ flexGrow: 1 }} className="landing__container">
       <Grid container spacing={2}>
@@ -25,3 +25,5 @@ export const LandingPage = () => {
     </Box>
   );
 };
+
+export default LandingPage;

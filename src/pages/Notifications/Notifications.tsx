@@ -6,7 +6,7 @@ import { NotificationCard } from "@components/NotificationCard/NotificationCard"
 import HomeLayout from "@src/layouts/HomeLayout";
 import { selectedPageState } from "@src/store/selectedPageState";
 
-export const Notifications = () => {
+const Notifications = () => {
   const setSelectedPageState = useSetRecoilState(selectedPageState);
 
   useEffect(() => {
@@ -34,3 +34,5 @@ export const Notifications = () => {
     </HomeLayout>
   );
 };
+
+export default Notifications;

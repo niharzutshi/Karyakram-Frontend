@@ -9,7 +9,7 @@ import { selectedPageState } from "@src/store/selectedPageState";
 
 import "./Dashboard.module.scss";
 
-export const Dashboard = () => {
+const Dashboard = () => {
   const setSelectedPageState = useSetRecoilState(selectedPageState);
 
   useEffect(() => {
@@ -52,3 +52,5 @@ export const Dashboard = () => {
     </HomeLayout>
   );
 };
+
+export default Dashboard;

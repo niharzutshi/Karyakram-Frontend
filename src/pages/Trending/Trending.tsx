@@ -9,7 +9,7 @@ import TrendingHighlight from "@components/TrendingHighlight/TrendingHighlight";
 import HomeLayout from "@src/layouts/HomeLayout";
 import { selectedPageState } from "@src/store/selectedPageState";
 
-export const Trending = () => {
+const Trending = () => {
   const setSelectedPageState = useSetRecoilState(selectedPageState);
 
   useEffect(() => {
@@ -59,3 +59,5 @@ export const Trending = () => {
     </HomeLayout>
   );
 };
+
+export default Trending;

@@ -10,8 +10,8 @@ import { userAuthState } from "../store/userAuthState";
 import { darkTheme, lightTheme } from "../theme";
 
 import "./App.module.scss";
-import { LandingPage } from "./LandingPage/LandingPage";
-import { Dashboard } from "./Dashboard/Dashboard";
+import LandingPage from "./LandingPage/LandingPage";
+import Dashboard from "./Dashboard/Dashboard";
 
 const App = () => {
   const darkThemeSelected = useRecoilValue(darkThemeSelectedState);

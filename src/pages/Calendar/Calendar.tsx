@@ -17,7 +17,7 @@ import HomeLayout from "@src/layouts/HomeLayout";
 
 import "./Calendar.module.scss";
 
-export const Calendar = () => {
+const Calendar = () => {
   const [calVisibility, setCalVisibility] = useRecoilState(calVisibilityState);
   const setSelectedPageState = useSetRecoilState(selectedPageState);
 
@@ -75,3 +75,5 @@ export const Calendar = () => {
     </HomeLayout>
   );
 };
+
+export default Calendar;
