@@ -8,7 +8,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FaceIcon from "@mui/icons-material/Face";
 
-import "./ExpandableCard.scss";
+import "./ExpandableCard.module.scss";
 
 const ExpandedContent = () => {
   return (

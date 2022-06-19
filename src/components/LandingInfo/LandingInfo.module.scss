@@ -1,0 +1,35 @@
+.landing-info__container {
+  padding: 20px;
+  border-radius: 20px;
+  background-image: url("https://i.imgur.com/uzRn7vO.png");
+  background-size: contain;
+  height: 500px;
+  width: 500px;
+  display: block;
+}
+
+.landing-info__astronaut {
+  float: right;
+  height: 200px;
+  width: 220px;
+  margin: -100px 0 0 20px;
+}
+
+.landing-info__button {
+  color: #49169c;
+  margin: 80px 0 0 20px;
+  border-radius: 17px;
+  font-weight: bolder;
+  font-size: 18px;
+  border: none;
+  background-color: white;
+  padding: 10px 30px 10px 30px;
+  cursor: pointer;
+}
+
+.landing-info__text {
+  cursor: default;
+  padding: 90px 0 0 20px;
+  font-weight: bold;
+  font-size: 25px;
+}

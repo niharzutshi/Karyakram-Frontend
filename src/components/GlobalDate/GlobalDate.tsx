@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import React from "react";
 
-import "./GlobalDate.scss";
+import "./GlobalDate.module.scss";
 
 type GlobalDateProps = {};
 

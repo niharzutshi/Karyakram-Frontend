@@ -12,14 +12,14 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
-import { EventDescription } from "@components/EventDescription/EventDescription";
-import { RightPanelUpper } from "@components/RightPanelUpper/RightPanelUpper";
-import { RightPanelLower } from "@components/RightPanelLower/RightPanelLower";
-import HomeLayout from "@src/layouts/HomeLayout";
+import { EventDescription } from "../../components/EventDescription/EventDescription";
+import { RightPanelUpper } from "../../components/RightPanelUpper/RightPanelUpper";
+import { RightPanelLower } from "../../components/RightPanelLower/RightPanelLower";
+import HomeLayout from "../../layouts/HomeLayout";
 
-import "./Event.scss";
+import "./Event.module.scss";
 
-export const Event = () => {
+const Event = () => {
   return (
     <HomeLayout>
       <Box sx={{ flexGrow: 1, background: "none" }}>
@@ -148,3 +148,5 @@ export const Event = () => {
     </HomeLayout>
   );
 };
+
+export default Event;

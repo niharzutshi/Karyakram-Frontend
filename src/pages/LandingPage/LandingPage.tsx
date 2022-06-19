@@ -1,15 +1,14 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import { styled } from "@mui/material/styles";
 
-import { LandingCard } from "@components/LandingCard/LandingCard";
-import { LandingPageHeader } from "@components/LandingPageHeader/LandingPageHeader";
-import { LandingPageFooter } from "@components/LandingPageFooter/LandingPageFooter";
+import { LandingCard } from "../../components/LandingCard/LandingCard";
+import { LandingPageHeader } from "../../components/LandingPageHeader/LandingPageHeader";
+import { LandingPageFooter } from "../../components/LandingPageFooter/LandingPageFooter";
 
-import "./LandingPage.scss";
+import "./LandingPage.module.scss";
 
-export const LandingPage = () => {
+const LandingPage = () => {
   return (
     <Box sx={{ flexGrow: 1 }} className="landing__container">
       <Grid container spacing={2}>
@@ -26,3 +25,5 @@ export const LandingPage = () => {
     </Box>
   );
 };
+
+export default LandingPage;

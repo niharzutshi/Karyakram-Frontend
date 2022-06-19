@@ -3,18 +3,17 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Drawer, List, ListItem, ListItemIcon } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
 import { useRecoilValue } from "recoil";
 
-import KaryakramIcon from "../../assets/images/K.svg";
-import "./Sidebar.scss";
+// import "./Sidebar.module.scss";
 
-import { selectedPageState } from "@src/store/selectedPageState";
+import { selectedPageState } from "../../store/selectedPageState";
+import { useRouter } from "next/router";
 
 export const Sidebar: React.FC = () => {
   const selectedPage = useRecoilValue(selectedPageState).selectedPage;
-  const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <Drawer
@@ -39,14 +38,14 @@ export const Sidebar: React.FC = () => {
           button
           alignItems="center"
           key="h"
-          onClick={() => navigate("/")}
+          onClick={() => router.push("/")}
           style={{
             backgroundColor: selectedPage === "home" ? "#4D0A6D" : "",
           }}
         >
           <Tooltip title="Home">
             <ListItemIcon className="karyakram-logo">
-              <img src={KaryakramIcon} />
+              <img src={"../../assets/images/K.svg"} />
             </ListItemIcon>
           </Tooltip>
         </ListItem>
@@ -54,7 +53,7 @@ export const Sidebar: React.FC = () => {
           button
           alignItems="center"
           key="n"
-          onClick={() => navigate("/notifications")}
+          onClick={() => router.push("/notifications")}
           style={{
             backgroundColor: selectedPage === "notifications" ? "#4D0A6D" : "",
           }}
@@ -69,7 +68,7 @@ export const Sidebar: React.FC = () => {
           button
           alignItems="center"
           key="t"
-          onClick={() => navigate("/trending")}
+          onClick={() => router.push("/trending")}
           style={{
             backgroundColor: selectedPage === "trending" ? "#4D0A6D" : "",
           }}
@@ -84,7 +83,7 @@ export const Sidebar: React.FC = () => {
           button
           alignItems="center"
           key="c"
-          onClick={() => navigate("/calendar")}
+          onClick={() => router.push("/calendar")}
           style={{
             backgroundColor: selectedPage === "calendar" ? "#4D0A6D" : "",
           }}

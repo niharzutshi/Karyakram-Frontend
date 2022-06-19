@@ -1,9 +1,9 @@
 import React from "react";
 import { useRecoilState } from "recoil";
 
-import { userAuthState } from "@src/store/UserAuthState";
+import { userAuthState } from "../../store/userAuthState";
 
-import "./LandingInfo.scss";
+import "./LandingInfo.module.scss";
 
 export const LandingInfo = () => {
   const [userAuthenticated, setUserAuthenticated] =

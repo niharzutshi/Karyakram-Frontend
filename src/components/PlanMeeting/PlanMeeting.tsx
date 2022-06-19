@@ -9,8 +9,8 @@ import Button from "@mui/material/Button";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import "./PlanMeeting.scss";
-import { calVisibilityState } from "@src/store/CalVisibilityState";
+import "./PlanMeeting.module.scss";
+import { calVisibilityState } from "../../store/calVisibilityState";
 import { useRecoilState } from "recoil";
 
 export const PlanMeeting = () => {

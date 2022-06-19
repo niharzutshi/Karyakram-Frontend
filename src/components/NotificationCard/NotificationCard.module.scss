@@ -1,0 +1,53 @@
+.notification-card__container {
+  width: 345px;
+  margin: 15px 15px 15px 20px;
+  background-color: #644bab;
+  border-radius: 10px !important;
+  color: white !important;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 5px 15px 5px 15px !important;
+}
+
+.notification-card__details {
+  margin-left: 10px;
+  font-size: 17px;
+}
+
+.notification-card__close-button {
+  cursor: pointer;
+  margin-top: 1px;
+}
+
+.notification-card__buttons {
+  text-transform: none !important;
+  color: white !important;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px 5px 10px;
+  background-color: #734273;
+  margin-right: 10px;
+}
+
+.notification-card__buttons:hover {
+  background-color: white;
+  color: #5b245c !important;
+}
+
+.notification-card__details-title {
+  font-weight: bold;
+}
+
+.main-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-box {
+  display: flex;
+}

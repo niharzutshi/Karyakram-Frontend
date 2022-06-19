@@ -1,11 +1,11 @@
-import GlobalDate from "@components/GlobalDate/GlobalDate";
-import { SearchBar } from "@components/SearchBar/SearchBar";
+import GlobalDate from "@/components/GlobalDate/GlobalDate";
+import { SearchBar } from "@/components/SearchBar/SearchBar";
 import { Box } from "@mui/material";
-import { darkThemeSelectedState } from "@src/store/DarkThemeSelectedState";
+import { darkThemeSelectedState } from "@/src/store/darkThemeSelectedState";
 import React from "react";
 import { useRecoilState } from "recoil";
 import DarkModeToggle from "react-dark-mode-toggle";
-import { ProfileDropdown } from "@components/ProfileDropdown/ProfileDropdown";
+import { ProfileDropdown } from "@/components/ProfileDropdown/ProfileDropdown";
 
 type NavbarProps = {};
 
