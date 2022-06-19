@@ -10,7 +10,15 @@ import "./LandingPage.module.scss";
 
 const LandingPage = () => {
   return (
-    <Box sx={{ flexGrow: 1 }} className="landing__container">
+    <Box
+      sx={{
+        flexGrow: 1,
+        width: "100%",
+        height: "102vh",
+        backgroundImage: 'url("https://i.imgur.com/O3VYjVq.png")',
+        backgroundSize: "cover",
+      }}
+    >
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <LandingPageHeader />

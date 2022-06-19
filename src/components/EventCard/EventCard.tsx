@@ -6,8 +6,6 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 
-import "./EventCard.module.scss";
-
 export const EventCard = () => {
   return (
     <CardContent sx={{ display: "flex", flexDirection: "row", padding: 2 }}>

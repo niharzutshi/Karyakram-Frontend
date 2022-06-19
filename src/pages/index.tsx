@@ -10,8 +10,8 @@ import { userAuthState } from "../store/userAuthState";
 import { darkTheme, lightTheme } from "../theme";
 
 import "./App.module.scss";
-import LandingPage from "./LandingPage/LandingPage";
-import Dashboard from "./Dashboard/Dashboard";
+import LandingPage from "./landingPage";
+import Dashboard from "./dashboard";
 
 const App = () => {
   const darkThemeSelected = useRecoilValue(darkThemeSelectedState);
@@ -19,8 +19,18 @@ const App = () => {
   return (
     <ThemeProvider theme={darkThemeSelected ? darkTheme : lightTheme}>
       <CssBaseline />
-      <div className="App">
-        {userAuthenticated && (
+      <div
+        style={{
+          margin: "0",
+          height: "100%",
+          overflow: "hidden",
+          position: "absolute",
+          zIndex: "1",
+          display: "flex",
+          width: "100%",
+        }}
+      >
+        {!userAuthenticated && (
           <Box display={{ xs: "none", sm: "none", lg: "block", md: "none" }}>
             <Sidebar />
           </Box>
@@ -31,7 +41,7 @@ const App = () => {
         <img
           src="https://i.imgur.com/ZBvrLmY.png"
           alt="astronaut on planet"
-          className="astro-planet"
+          style={{ position: "absolute", zIndex: "2", top: "57.4%" }}
         />
       </Box>
     </ThemeProvider>

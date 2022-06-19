@@ -12,14 +12,33 @@ import "./ExpandableCard.module.scss";
 
 const ExpandedContent = () => {
   return (
-    <div className="expanded-content__container">
-      <div className="expanded-content__first-row">
+    <div
+      style={{
+        cursor: "default",
+        backgroundColor: "#d3cbe9",
+        color: "#36226d",
+        fontWeight: "bold",
+        fontSize: "17px",
+        padding: "25px 25px 10px 25px",
+        borderRadius: "5px",
+      }}
+    >
+      <div style={{ marginBottom: "5px", display: "inline-block" }}>
         <span>Feb 10, 2022</span>
-        <span className="expanded-content__badge">Today</span>
+        <span>Today</span>
       </div>
       <div>Discuss UI Components</div>
-      <span className="expanded-content__category">Work</span>
-      <div className="expanded-content__profiles  ">
+      <span
+        style={{
+          border: "1px solid #36226d",
+          padding: "2px 5px 2px 5px",
+          borderRadius: "50px",
+          fontSize: "10px",
+        }}
+      >
+        Work
+      </span>
+      <div style={{ marginTop: "5px" }}>
         <AccountCircleIcon fontSize="large" />
         <FaceIcon fontSize="large" />
       </div>
@@ -32,6 +51,14 @@ interface ExpandableCardProps {
   width?: string;
 }
 
+const chevronStyle = {
+  color: "white !important",
+  borderRadius: "2px",
+  transition: "all 2 linear",
+};
+
+const chevronRotatedStyle = { transform: "rotate(-90deg)" };
+
 export const ExpandableCard: React.FC<ExpandableCardProps> = ({
   color = "#644BAB",
   width = "345px",
@@ -42,7 +69,15 @@ export const ExpandableCard: React.FC<ExpandableCardProps> = ({
 
   return (
     <Card
-      className="expandable-card__container"
+      style={{
+        marginLeft: "15px",
+        padding: "5px 15px 5px 15px",
+        backgroundColor: "#36226d",
+        color: "white",
+        border: "1px solid #36226d",
+        borderRadius: "12px",
+        fontSize: "14px",
+      }}
       sx={{
         width: width,
         backgroundColor: color,
@@ -58,15 +93,15 @@ export const ExpandableCard: React.FC<ExpandableCardProps> = ({
         >
           <ExpandMoreIcon
             fontSize="medium"
-            className={`expandable-card__chevron ${
-              rotateChevron ? "rotate" : ""
-            }`}
+            style={rotateChevron ? chevronStyle : chevronRotatedStyle}
           />
         </IconButton>
-        <div className="expandable-card__details">
-          <span className="expandable-card__details-title">Karyakram Meet</span>
+        <div style={{ marginLeft: 10 }}>
+          <span style={{ fontWeight: "bold", fontSize: "20px" }}>
+            Karyakram Meet
+          </span>
           <br />
-          <span className="date">Feb 10, 2022</span>
+          <span>Feb 10, 2022</span>
         </div>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>

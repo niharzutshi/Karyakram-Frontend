@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useSetRecoilState } from "recoil";
 
-import "./Notifications.module.scss";
 import { NotificationCard } from "../../components/NotificationCard/NotificationCard";
 import HomeLayout from "../../layouts/HomeLayout";
 import { selectedPageState } from "../../store/selectedPageState";

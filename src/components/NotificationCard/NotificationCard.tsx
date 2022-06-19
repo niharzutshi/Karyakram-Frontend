@@ -4,8 +4,6 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import CancelIcon from "@mui/icons-material/Cancel";
 
-import "./NotificationCard.module.scss";
-
 interface NotificationCardProps {
   // 1 = upcoming event / some update
   // 2 = invite
@@ -14,37 +12,63 @@ interface NotificationCardProps {
   title: string;
 }
 
+const notificationCardButtonStyle = {
+  textTransform: "none",
+  color: "white !important",
+  background: "none",
+  border: "none",
+  borderRadius: "5px",
+  cursor: "pointer",
+  padding: "5px 10px 5px 10px",
+  backgroundColor: "#734273",
+  marginRight: "10px",
+};
+
 export const NotificationCard: React.FC<NotificationCardProps> = ({
   type,
   title,
 }) => {
   return (
     <Card
-      className="notification-card__container"
       sx={{
-        height: "50px",
-        width: "900px",
-        backgroundColor: "#521853",
+        width: "345px",
+        margin: "15px 15px 15px 20px",
+        backgroundColor: "#644bab",
+        borderRadius: "10px !important",
+        color: "white !important",
+        cursor: "default",
+        display: "flex",
+        justifyContent: "center",
+        alignContent: "center",
+        flexDirection: "column",
+        padding: "5px 15px 5px 15px !important",
       }}
     >
-      <Box className="main-grid">
-        <Grid item className="notification-card__details">
-          <span className="notification-card__details-title">
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Grid item sx={{ marginLeft: "10px", fontSize: "17px" }}>
+          <span
+            style={{
+              fontWeight: "bold",
+            }}
+          >
             {type === 1 ? "Upcoming: " : type === 2 ? "Invite: " : "Reminder: "}
           </span>
           {title}
         </Grid>
-        <Box className="button-box">
+        <Box display="flex">
           {(type === 1 || type === 3) && (
-            <button className="notification-card__buttons">Learn More</button>
+            // @ts-ignore
+            <button style={notificationCardButtonStyle}>Learn More</button>
           )}
           {type === 2 && (
             <Box>
-              <button className="notification-card__buttons">Reject</button>
-              <button className="notification-card__buttons">Accept</button>
+              {/* @ts-ignore */}
+              <button style={notificationCardButtonStyle}>Reject</button>
+              {/* @ts-ignore */}
+              <button style={notificationCardButtonStyle}>Accept</button>
             </Box>
           )}
-          <CancelIcon className="notification-card__close-button" />
+          <CancelIcon style={{ cursor: "pointer", marginTop: "1px" }} />
         </Box>
       </Box>
     </Card>
