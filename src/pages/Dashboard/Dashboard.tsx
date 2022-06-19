@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { useSetRecoilState } from "recoil";
 
-import DashboardGlobe from "@components/DashboardGlobe/DashboardGlobe";
-import { ExpandableCard } from "@components/ExpandableCard/ExpandableCard";
+import DashboardGlobe from "@/components/DashboardGlobe/DashboardGlobe";
+import { ExpandableCard } from "@/components/ExpandableCard/ExpandableCard";
 import HomeLayout from "@/src/layouts/HomeLayout";
 import { selectedPageState } from "@/src/store/selectedPageState";
 

@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { useSetRecoilState } from "recoil";
 
-import { RightPanelLower } from "@components/RightPanelLower/RightPanelLower";
-import { RightPanelUpper } from "@components/RightPanelUpper/RightPanelUpper";
-import { TrendingCard } from "@components/TrendingCard/TrendingCard";
-import TrendingHighlight from "@components/TrendingHighlight/TrendingHighlight";
+import { RightPanelLower } from "@/components/RightPanelLower/RightPanelLower";
+import { RightPanelUpper } from "@/components/RightPanelUpper/RightPanelUpper";
+import { TrendingCard } from "@/components/TrendingCard/TrendingCard";
+import TrendingHighlight from "@/components/TrendingHighlight/TrendingHighlight";
 import HomeLayout from "@/src/layouts/HomeLayout";
 import { selectedPageState } from "@/src/store/selectedPageState";
 

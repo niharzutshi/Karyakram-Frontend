@@ -1,8 +1,8 @@
-import { CryptoConnect } from "@components/CryptoConnect/CryptoConnect";
-import { Login } from "@components/Login/Login";
-import { OAuthOptions } from "@components/OAuthOptions/OAuthOptions";
-import { ResetPassword } from "@components/ResetPassword/ResetPassword";
-import { Signup } from "@components/Signup/Signup";
+import { CryptoConnect } from "@/components/CryptoConnect/CryptoConnect";
+import { Login } from "@/components/Login/Login";
+import { OAuthOptions } from "@/components/OAuthOptions/OAuthOptions";
+import { ResetPassword } from "@/components/ResetPassword/ResetPassword";
+import { Signup } from "@/components/Signup/Signup";
 import { Modal, Box, Typography, Divider } from "@mui/material";
 import { authModalState } from "@/src/store/authModalState";
 import React from "react";

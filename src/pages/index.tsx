@@ -2,7 +2,7 @@ import React from "react";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import { RecoilRoot, useRecoilValue } from "recoil";
 
-import { Sidebar } from "@components/Sidebar/Sidebar";
+import { Sidebar } from "@/components/Sidebar/Sidebar";
 
 import { darkThemeSelectedState } from "../store/darkThemeSelectedState";
 import { userAuthState } from "../store/userAuthState";
