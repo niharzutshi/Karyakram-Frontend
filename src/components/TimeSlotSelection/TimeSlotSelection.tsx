@@ -2,9 +2,6 @@ import React from "react";
 
 import { TimeSlotTile } from "../TimeSlotTile/TimeSlotTile";
 
-// @ts-ignore
-import style from "./TimeSlotSelection.module.scss";
-
 interface TimeSlotSelectionProps {
   instances: number;
 }
@@ -14,7 +11,7 @@ export const TimeSlotSelection: React.FC<TimeSlotSelectionProps> = ({
 }) => {
   return (
     <div
-      className={style["time-slot-selection__container"]}
+      className="time-slot-selection__container"
       style={{
         maxHeight: "310px",
         overflowY: "scroll",

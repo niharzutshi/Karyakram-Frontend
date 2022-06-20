@@ -17,8 +17,6 @@ import { RightPanelUpper } from "../../components/RightPanelUpper/RightPanelUppe
 import { RightPanelLower } from "../../components/RightPanelLower/RightPanelLower";
 import HomeLayout from "../../layouts/HomeLayout";
 
-import "./Event.module.scss";
-
 const Event = () => {
   return (
     <HomeLayout>

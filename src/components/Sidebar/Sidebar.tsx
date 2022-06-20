@@ -6,9 +6,6 @@ import { Drawer, List, ListItem, ListItemIcon } from "@mui/material";
 import Tooltip from "@mui/material/Tooltip";
 import { useRecoilValue } from "recoil";
 
-// @ts-ignore
-import style from "./Sidebar.module.scss";
-
 import { selectedPageState } from "../../store/selectedPageState";
 import { useRouter } from "next/router";
 
@@ -34,7 +31,7 @@ export const Sidebar: React.FC = () => {
       variant="permanent"
       anchor="left"
     >
-      <List className={style["sidebar-icon-list"]}>
+      <List className="sidebar-icon-list">
         <ListItem
           button
           alignItems="center"
@@ -45,7 +42,7 @@ export const Sidebar: React.FC = () => {
           }}
         >
           <Tooltip title="Home">
-            <ListItemIcon className={style["karyakram-logo"]}>
+            <ListItemIcon className="karyakram-logo">
               <img src={"https://i.imgur.com/qjwghoE.png"} />
             </ListItemIcon>
           </Tooltip>

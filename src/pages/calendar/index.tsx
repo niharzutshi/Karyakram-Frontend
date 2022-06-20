@@ -15,8 +15,6 @@ import { calVisibilityState } from "../../store/calVisibilityState";
 import { selectedPageState } from "../../store/selectedPageState";
 import HomeLayout from "../../layouts/HomeLayout";
 
-import "./Calendar.module.scss";
-
 const Calendar = () => {
   const [calVisibility, setCalVisibility] = useRecoilState(calVisibilityState);
   const setSelectedPageState = useSetRecoilState(selectedPageState);

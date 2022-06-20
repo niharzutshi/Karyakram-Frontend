@@ -6,8 +6,6 @@ import { LandingCard } from "../../components/LandingCard/LandingCard";
 import { LandingPageHeader } from "../../components/LandingPageHeader/LandingPageHeader";
 import { LandingPageFooter } from "../../components/LandingPageFooter/LandingPageFooter";
 
-import "./LandingPage.module.scss";
-
 const LandingPage = () => {
   return (
     <Box

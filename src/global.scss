@@ -1,3 +1,109 @@
+/* RightPanelUpper Sytling */
+.right-panel__container {
+  padding: 20px;
+}
+
+.right-panel__container > * {
+  display: block;
+  margin: 10px 0;
+}
+
+/* Sidebar styling */
+.sidebar-icon-list > * {
+  display: block !important;
+  margin: 20px 0 !important;
+}
+
+.karyakram-logo {
+  width: 70px !important;
+  height: 70px !important;
+  justify-content: center !important;
+  margin-left: -15px;
+}
+
+/* TimeSlotSelection Styling */
+.time-slot-selection__container {
+  margin: 20px 100px 20px 20px;
+}
+
+.time-slot-selection__container > * {
+  display: block;
+  margin: 15px 0;
+}
+
+/* TimeSlotTile styling */
+.time-slot__container {
+  border: 3px solid #9f65ff;
+  border-radius: 10px;
+  padding: 5px;
+  color: #9f65ff;
+  text-align: center;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.time-slot__container:hover {
+  background-color: #dfcece;
+}
+
+/* TrendingCard styling */
+.trending-card__container {
+  border-radius: none !important;
+}
+
+.trending-card__title {
+  cursor: default !important;
+}
+
+.trending-card__register-button {
+  background-color: #800c83 !important;
+  padding: 8px !important;
+  color: white !important;
+  border-radius: 10px !important;
+  text-transform: none !important;
+  margin: 0 20px 0px 20px !important;
+}
+
+.trending-card__register-button:hover {
+  background-color: #c11fc7 !important;
+}
+
+.trending-card__bookmark-button {
+  padding: 5px !important;
+  padding-bottom: 5px !important;
+  border: 3px solid #800c83 !important;
+  border-radius: 10px !important;
+  text-transform: none !important;
+}
+
+.trending-card-container > * {
+  margin-left: 20px;
+}
+
+/* Dashboard Styling */
+.event-list {
+  padding: 0 0 0 80px;
+  margin: 50px 0 50px 0 !important;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.event-list-right {
+  padding: 0 0 0 20px;
+  margin: 50px 0 50px 0 !important;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.event-list > * {
+  margin: 25px 0;
+}
+
+.event-list-right > * {
+  margin: 25px 0;
+}
+
+/* React Calendar Styling */
 .react-calendar {
   margin: 20px;
   padding: 20px;

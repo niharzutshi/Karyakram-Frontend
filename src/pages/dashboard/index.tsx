@@ -7,9 +7,6 @@ import { ExpandableCard } from "../../components/ExpandableCard/ExpandableCard";
 import HomeLayout from "../../layouts/HomeLayout";
 import { selectedPageState } from "../../store/selectedPageState";
 
-// @ts-ignore
-import style from "./Dashboard.module.scss";
-
 const Dashboard = () => {
   const setSelectedPageState = useSetRecoilState(selectedPageState);
 
@@ -24,7 +21,7 @@ const Dashboard = () => {
       <Grid container spacing={2}>
         <Grid item xs={8}>
           <Grid container>
-            <Grid item xs={12} md={12} lg={6} className={style["event-list"]}>
+            <Grid item xs={12} md={12} lg={6} className="event-list">
               <Typography
                 variant="h5"
                 style={{ fontWeight: 500, cursor: "default" }}
@@ -36,13 +33,7 @@ const Dashboard = () => {
               <ExpandableCard />
               <ExpandableCard />
             </Grid>
-            <Grid
-              item
-              xs={12}
-              md={12}
-              lg={6}
-              className={style["event-list-right"]}
-            >
+            <Grid item xs={12} md={12} lg={6} className="event-list-right">
               <Typography
                 variant="h5"
                 style={{ fontWeight: 500, cursor: "default" }}
