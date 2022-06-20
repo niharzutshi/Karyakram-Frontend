@@ -36,27 +36,25 @@ const Calendar = () => {
           <Grid item xs={6} md={9}>
             <Container
               style={{
-                marginTop: "7vh",
+                marginTop: "8vh",
                 backgroundColor: "#242424",
                 minHeight: "80vh",
                 borderRadius: "25px",
-                marginLeft: "0",
                 color: "white",
                 padding: "50px",
                 display: "flex",
-                flex: "1",
-                maxWidth: "100%",
+                flexDirection: "column",
                 width: "100%",
               }}
             >
               <UserInfoCard />
               {calVisibility ? (
                 <>
-                  <Grid container>
+                  <Grid container mt={3}>
                     <Grid item xs={8}>
                       <CalendarComponent />
                     </Grid>
-                    <Grid item xs={4} marginLeft="-40px">
+                    <Grid item xs={4}>
                       <TimeSlotSelection instances={9} />
                     </Grid>
                   </Grid>
@@ -84,7 +82,7 @@ const Calendar = () => {
             </Container>
           </Grid>
           <Grid
-            mt={6.5}
+            mt={7.5}
             item
             xs={4}
             md={3}

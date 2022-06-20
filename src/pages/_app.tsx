@@ -5,6 +5,8 @@ import { RecoilRoot, useRecoilValue } from "recoil";
 import { darkTheme, lightTheme } from "../theme";
 import { darkThemeSelectedState } from "../store/darkThemeSelectedState";
 
+import "../global.scss";
+
 function MyApp({ children }: any) {
   const darkThemeSelected = useRecoilValue(darkThemeSelectedState);
 
