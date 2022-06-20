@@ -9,7 +9,7 @@ const StyledBox = styled.div`
   position: relative;
   width: 100px;
   height: 70px;
-  backgroundcolor: #36226d;
+  background-color: #36226d;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -46,6 +46,7 @@ export const UserInfoCard = () => {
             pb: 1,
             backgroundColor: "#242424",
             color: "white",
+            mt: 3,
           }}
         >
           <Typography component="div" variant="h5">

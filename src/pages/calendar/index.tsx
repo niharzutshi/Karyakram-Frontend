@@ -15,8 +15,6 @@ import { calVisibilityState } from "../../store/calVisibilityState";
 import { selectedPageState } from "../../store/selectedPageState";
 import HomeLayout from "../../layouts/HomeLayout";
 
-import "./Calendar.module.scss";
-
 const Calendar = () => {
   const [calVisibility, setCalVisibility] = useRecoilState(calVisibilityState);
   const setSelectedPageState = useSetRecoilState(selectedPageState);
@@ -30,22 +28,24 @@ const Calendar = () => {
   return (
     <HomeLayout>
       <Box
-        sx={{ marginTop: -7.5, flexGrow: 1, paddingLeft: 5, paddingRight: 5 }}
+        sx={{
+          marginTop: -7.5,
+          flexGrow: 1,
+          paddingLeft: 5,
+          paddingRight: 5,
+        }}
       >
         <Grid container spacing={2}>
           <Grid item xs={6} md={9}>
             <Container
               style={{
-                marginTop: "7vh",
+                marginTop: "8vh",
                 backgroundColor: "#242424",
-                minHeight: "80vh",
                 borderRadius: "25px",
-                marginLeft: "0",
                 color: "white",
-                padding: "50px",
+                padding: "36px",
                 display: "flex",
-                flex: "1",
-                maxWidth: "100%",
+                flexDirection: "column",
                 width: "100%",
               }}
             >
@@ -56,21 +56,21 @@ const Calendar = () => {
                     <Grid item xs={8}>
                       <CalendarComponent />
                     </Grid>
-                    <Grid item xs={4} marginLeft="-40px">
+                    <Grid item xs={4}>
                       <TimeSlotSelection instances={9} />
                     </Grid>
                   </Grid>
                   <Box display="flex" justifyContent="flex-end">
                     <Button
                       style={{
-                        border: "none !important",
-                        backgroundColor: "#5b155d !important",
-                        borderRadius: "10px !important",
-                        minWidth: "50px !important",
-                        minHeight: "50px !important",
-                        color: "white !important",
-                        fontSize: "larger !important",
-                        cursor: "pointer !important",
+                        border: "none",
+                        backgroundColor: "#5b155d ",
+                        borderRadius: "10px ",
+                        minWidth: "50px",
+                        minHeight: "50px",
+                        color: "white",
+                        fontSize: "larger",
+                        cursor: "pointer",
                       }}
                       onClick={() => setCalVisibility(!calVisibility)}
                     >
@@ -84,7 +84,7 @@ const Calendar = () => {
             </Container>
           </Grid>
           <Grid
-            mt={6.5}
+            mt={7.5}
             item
             xs={4}
             md={3}

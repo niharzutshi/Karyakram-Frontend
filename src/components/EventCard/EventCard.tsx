@@ -8,7 +8,16 @@ import Box from "@mui/material/Box";
 
 export const EventCard = () => {
   return (
-    <CardContent sx={{ display: "flex", flexDirection: "row", padding: 2 }}>
+    <CardContent
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        width: "100%",
+        padding: "15px",
+      }}
+    >
       <CardMedia
         // @ts-ignore
         component="img"
@@ -24,32 +33,33 @@ export const EventCard = () => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "column",
           justifyContent: "left",
           color: "white",
+          padding: 2,
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "left",
-            color: "white",
-            padding: 2,
-          }}
-        >
-          {/*@ts-ignore*/}
-          <Typography component="div" variant="h9">
-            UserName
-          </Typography>
-          <Typography variant="subtitle1" component="div" color="#432452">
-            Bio
-          </Typography>
-        </Box>
-        <Button className="right-panel__button" style={{ width: "200px" }}>
-          <Typography fontSize={13}>Register</Typography>
-        </Button>
+        {/*@ts-ignore*/}
+        <Typography component="div" variant="h9">
+          UserName
+        </Typography>
+        <Typography variant="subtitle1" component="div" color="#432452">
+          Bio
+        </Typography>
       </Box>
+      <Button
+        className="right-panel__button"
+        style={{
+          width: "30%",
+          textTransform: "capitalize",
+          color: "white",
+          backgroundColor: "#800C83",
+          borderRadius: "10px",
+          height: "50%",
+        }}
+      >
+        Register
+      </Button>
     </CardContent>
   );
 };

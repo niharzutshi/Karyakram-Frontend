@@ -1,12 +1,31 @@
 import type { AppProps } from "next/app";
-import { RecoilRoot } from "recoil";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { RecoilRoot, useRecoilValue } from "recoil";
 
-function MyApp({ Component, pageProps }: AppProps) {
+import { darkTheme, lightTheme } from "../theme";
+import { darkThemeSelectedState } from "../store/darkThemeSelectedState";
+
+import "../global.scss";
+
+function MyApp({ children }: any) {
+  const darkThemeSelected = useRecoilValue(darkThemeSelectedState);
+
   return (
-    <RecoilRoot>
-      <Component {...pageProps} />
-    </RecoilRoot>
+    <ThemeProvider theme={darkThemeSelected ? darkTheme : lightTheme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
   );
 }
 
-export default MyApp;
+const App = ({ Component, pageProps }: AppProps) => {
+  return (
+    <RecoilRoot>
+      <MyApp>
+        <Component {...pageProps} />
+      </MyApp>
+    </RecoilRoot>
+  );
+};
+
+export default App;

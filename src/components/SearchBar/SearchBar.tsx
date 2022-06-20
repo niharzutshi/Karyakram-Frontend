@@ -19,7 +19,7 @@ const searchBarContainerDark = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  maxWidth: '"500px"',
+  maxWidth: "500px",
   margin: "20px",
   backgroundColor: "#282828",
   borderRadius: "12px",
@@ -27,7 +27,7 @@ const searchBarContainerDark = {
 
 const searchBarElement = {
   color: "white",
-  width: '"500px"',
+  width: "500px",
   border: "none",
   padding: "10px 15px 10px 15px",
   outline: "none",
@@ -37,7 +37,7 @@ const searchBarElement = {
 };
 
 const searchBarElementDark = {
-  width: '"500px"',
+  width: "500px",
   border: "none",
   padding: "10px 15px 10px 15px",
   outline: "none",
