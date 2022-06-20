@@ -63,14 +63,14 @@ const Calendar = () => {
                   <Box display="flex" justifyContent="flex-end">
                     <Button
                       style={{
-                        border: "none !important",
-                        backgroundColor: "#5b155d !important",
-                        borderRadius: "10px !important",
-                        minWidth: "50px !important",
-                        minHeight: "50px !important",
-                        color: "white !important",
-                        fontSize: "larger !important",
-                        cursor: "pointer !important",
+                        border: "none ",
+                        backgroundColor: "#5b155d ",
+                        borderRadius: "10px ",
+                        minWidth: "50px ",
+                        minHeight: "50px ",
+                        color: "white ",
+                        fontSize: "larger ",
+                        cursor: "pointer ",
                       }}
                       onClick={() => setCalVisibility(!calVisibility)}
                     >

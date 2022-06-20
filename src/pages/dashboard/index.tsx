@@ -25,7 +25,10 @@ const Dashboard = () => {
         <Grid item xs={8}>
           <Grid container>
             <Grid item xs={12} md={12} lg={6} className={style["event-list"]}>
-              <Typography variant="h5" style={{ fontWeight: 500 }}>
+              <Typography
+                variant="h5"
+                style={{ fontWeight: 500, cursor: "default" }}
+              >
                 Current Events
               </Typography>
               <ExpandableCard />
@@ -40,7 +43,10 @@ const Dashboard = () => {
               lg={6}
               className={style["event-list-right"]}
             >
-              <Typography variant="h5" style={{ fontWeight: 500 }}>
+              <Typography
+                variant="h5"
+                style={{ fontWeight: 500, cursor: "default" }}
+              >
                 Upcoming Events
               </Typography>
               <ExpandableCard />

@@ -52,7 +52,7 @@ interface ExpandableCardProps {
 }
 
 const chevronStyle = {
-  color: "white !important",
+  color: "white ",
   borderRadius: "2px",
   transition: "all 2 linear",
 };

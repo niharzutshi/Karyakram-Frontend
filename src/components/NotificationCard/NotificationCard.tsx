@@ -14,7 +14,7 @@ interface NotificationCardProps {
 
 const notificationCardButtonStyle = {
   textTransform: "none",
-  color: "white !important",
+  color: "white",
   background: "none",
   border: "none",
   borderRadius: "5px",
@@ -34,14 +34,14 @@ export const NotificationCard: React.FC<NotificationCardProps> = ({
         width: "345px",
         margin: "15px 15px 15px 20px",
         backgroundColor: "#644bab",
-        borderRadius: "10px !important",
-        color: "white !important",
+        borderRadius: "10px ",
+        color: "white ",
         cursor: "default",
         display: "flex",
         justifyContent: "center",
         alignContent: "center",
         flexDirection: "column",
-        padding: "5px 15px 5px 15px !important",
+        padding: "5px 15px 5px 15px ",
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
