@@ -21,7 +21,7 @@ const Trending = () => {
   return (
     <HomeLayout>
       <Grid container mt={2}>
-        <Grid item md={9} pl={6}>
+        <Grid item md={9} pl={8}>
           <TrendingHighlight />
           <Box mt={4} display="flex" alignItems="center">
             <Typography variant="h5" fontWeight={600}>
@@ -38,18 +38,27 @@ const Trending = () => {
               Coming soon
             </Button>
           </Box>
-          <Box
+          <Grid
+            container
             display="flex"
             flexDirection="row"
             mt={3}
             ml={3}
-            className="trending-card-container"
+            columnSpacing={2}
           >
-            <TrendingCard />
-            <TrendingCard />
-            <TrendingCard />
-            <TrendingCard />
-          </Box>
+            <Grid item>
+              <TrendingCard />
+            </Grid>
+            <Grid item>
+              <TrendingCard />
+            </Grid>
+            <Grid item>
+              <TrendingCard />
+            </Grid>
+            <Grid item>
+              <TrendingCard />
+            </Grid>
+          </Grid>
         </Grid>
         <Grid item md={3} display={{ lg: "block", sm: "none", md: "none" }}>
           <RightPanelUpper />

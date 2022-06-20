@@ -31,11 +31,11 @@ export const NotificationCard: React.FC<NotificationCardProps> = ({
   return (
     <Card
       sx={{
-        width: "345px",
+        maxWidth: "500px",
         margin: "15px 15px 15px 20px",
-        backgroundColor: "#644bab",
+        backgroundColor: "#521853",
         borderRadius: "10px ",
-        color: "white ",
+        color: "white",
         cursor: "default",
         display: "flex",
         justifyContent: "center",
@@ -44,7 +44,13 @@ export const NotificationCard: React.FC<NotificationCardProps> = ({
         padding: "5px 15px 5px 15px ",
       }}
     >
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
         <Grid item sx={{ marginLeft: "10px", fontSize: "17px" }}>
           <span
             style={{
@@ -61,7 +67,7 @@ export const NotificationCard: React.FC<NotificationCardProps> = ({
             <button style={notificationCardButtonStyle}>Learn More</button>
           )}
           {type === 2 && (
-            <Box>
+            <Box display="flex" justifyContent="center" alignItems="center">
               {/* @ts-ignore */}
               <button style={notificationCardButtonStyle}>Reject</button>
               {/* @ts-ignore */}
