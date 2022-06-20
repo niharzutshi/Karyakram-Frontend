@@ -28,7 +28,12 @@ const Calendar = () => {
   return (
     <HomeLayout>
       <Box
-        sx={{ marginTop: -7.5, flexGrow: 1, paddingLeft: 5, paddingRight: 5 }}
+        sx={{
+          marginTop: -7.5,
+          flexGrow: 1,
+          paddingLeft: 5,
+          paddingRight: 5,
+        }}
       >
         <Grid container spacing={2}>
           <Grid item xs={6} md={9}>
@@ -36,10 +41,9 @@ const Calendar = () => {
               style={{
                 marginTop: "8vh",
                 backgroundColor: "#242424",
-                minHeight: "80vh",
                 borderRadius: "25px",
                 color: "white",
-                padding: "50px",
+                padding: "36px",
                 display: "flex",
                 flexDirection: "column",
                 width: "100%",
@@ -48,7 +52,7 @@ const Calendar = () => {
               <UserInfoCard />
               {calVisibility ? (
                 <>
-                  <Grid container mt={3}>
+                  <Grid container>
                     <Grid item xs={8}>
                       <CalendarComponent />
                     </Grid>
@@ -59,14 +63,14 @@ const Calendar = () => {
                   <Box display="flex" justifyContent="flex-end">
                     <Button
                       style={{
-                        border: "none ",
+                        border: "none",
                         backgroundColor: "#5b155d ",
                         borderRadius: "10px ",
-                        minWidth: "50px ",
-                        minHeight: "50px ",
-                        color: "white ",
-                        fontSize: "larger ",
-                        cursor: "pointer ",
+                        minWidth: "50px",
+                        minHeight: "50px",
+                        color: "white",
+                        fontSize: "larger",
+                        cursor: "pointer",
                       }}
                       onClick={() => setCalVisibility(!calVisibility)}
                     >

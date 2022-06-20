@@ -110,7 +110,16 @@ export const PlanMeeting = () => {
       >
         <Box display="flex" justifyContent="flex-start">
           <Button
-            className="calendar__proceed-button"
+            style={{
+              border: "none ",
+              backgroundColor: "#5b155d ",
+              borderRadius: "10px ",
+              minWidth: "50px ",
+              minHeight: "50px ",
+              color: "white ",
+              fontSize: "larger ",
+              cursor: "pointer ",
+            }}
             onClick={() => setCalVisibility(!calVisibility)}
           >
             {calVisibility ? ">" : "<"}
