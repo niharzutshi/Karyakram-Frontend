@@ -1,11 +1,10 @@
 import React from "react";
-import { useRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 
-import { userAuthState } from "../../store/userAuthState";
+import { authModalState } from "../../store/authModalState";
 
 export const LandingInfo = () => {
-  const [userAuthenticated, setUserAuthenticated] =
-    useRecoilState(userAuthState);
+  const setModalState = useSetRecoilState(authModalState);
   return (
     <div
       style={{
@@ -14,40 +13,41 @@ export const LandingInfo = () => {
         backgroundImage: 'url("https://i.imgur.com/uzRn7vO.png")',
         backgroundSize: "contain",
         height: "500px",
-        width: "500px",
+        width: "600px",
         display: "block",
       }}
     >
       <div
         style={{
           cursor: "default",
-          padding: "90px 0 0 20px",
+          padding: "50px 0 0 20px",
           fontWeight: "bold",
-          fontSize: "25px",
+          fontSize: "30px",
         }}
       >
         Link your Calendar
         <br />
-        Check Availability
+        <span style={{ color: "#CE6432" }}>Check Availability</span>
         <br />
         and
         <br />
-        Plan Meetings
+        <span style={{ color: "#D53A7A" }}>Plan Meetings</span>
       </div>
       <button
         style={{
           color: "#49169c",
-          margin: "80px 0 0 20px",
+          margin: "40px 0 0 20px",
           borderRadius: "17px",
           fontWeight: "bolder",
-          fontSize: "18px",
+          fontSize: "20px",
           border: "none",
           backgroundColor: "white",
-          padding: "10px 30px 10px 30px",
+          padding: "15px 30px 15px 30px",
           cursor: "pointer",
+          width: "220px",
         }}
         onClick={() => {
-          setUserAuthenticated(!userAuthenticated);
+          setModalState({ open: true, view: "signup" });
         }}
       >
         Get Started
@@ -57,9 +57,9 @@ export const LandingInfo = () => {
         alt="astronaut2"
         style={{
           float: "right",
-          height: "200px",
-          width: "220px",
-          margin: "-100px 0 0 20px",
+          height: "270px",
+          width: "290px",
+          marginTop: "-30px",
         }}
       />
     </div>

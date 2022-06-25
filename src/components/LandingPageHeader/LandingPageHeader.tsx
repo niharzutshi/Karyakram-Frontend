@@ -28,38 +28,44 @@ export const LandingPageHeader = () => {
             }}
           />
         </Link>
-        <Link
-          href="/"
-          style={{
-            fontWeight: "bold",
-            fontSize: "20px",
-            textDecoration: "none",
-            color: "white",
-          }}
-        >
-          Home
+        <Link href="/">
+          <span
+            style={{
+              fontWeight: "bold",
+              fontSize: "20px",
+              textDecoration: "none",
+              color: "white",
+              cursor: "pointer",
+            }}
+          >
+            Home
+          </span>
         </Link>
-        <Link
-          href="/trending"
-          style={{
-            fontWeight: "bold",
-            fontSize: "20px",
-            color: "#af9de0",
-            textDecoration: "none",
-          }}
-        >
-          Discover
+        <Link href="/trending">
+          <span
+            style={{
+              fontWeight: "bold",
+              fontSize: "20px",
+              textDecoration: "none",
+              color: "white",
+              cursor: "pointer",
+            }}
+          >
+            Discover
+          </span>
         </Link>
-        <Link
-          href="/about"
-          style={{
-            fontWeight: "bold",
-            fontSize: "20px",
-            color: "#af9de0",
-            textDecoration: "none",
-          }}
-        >
-          About
+        <Link href="/">
+          <span
+            style={{
+              fontWeight: "bold",
+              fontSize: "20px",
+              textDecoration: "none",
+              color: "white",
+              cursor: "pointer",
+            }}
+          >
+            About
+          </span>
         </Link>
         <button
           style={{
@@ -69,9 +75,11 @@ export const LandingPageHeader = () => {
             fontSize: "15px",
             fontWeight: "bold",
             padding: "5px 20px 10px 20px",
-            backgroundColor: "#5b3f7f",
+            backgroundColor: "#472C83",
             border: "none",
             borderRadius: "0 0 12px 12px",
+            cursor: "pointer",
+            width: "100px",
           }}
           onClick={() => {
             setAuthModalState({ open: true, view: "crypto" });
@@ -87,9 +95,11 @@ export const LandingPageHeader = () => {
             fontSize: "15px",
             fontWeight: "bold",
             padding: "5px 20px 10px 20px",
-            backgroundColor: "#5b3f7f",
+            backgroundColor: "#472C83",
             border: "none",
             borderRadius: "0 0 12px 12px",
+            cursor: "pointer",
+            width: "100px",
           }}
           onClick={() => {
             setAuthModalState({ open: true, view: "login" });

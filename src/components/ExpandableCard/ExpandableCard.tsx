@@ -50,12 +50,12 @@ interface ExpandableCardProps {
 }
 
 const chevronStyle = {
-  color: "white ",
+  color: "white",
   borderRadius: "2px",
   transition: "all 2 linear",
 };
 
-const chevronRotatedStyle = { transform: "rotate(-90deg)" };
+const chevronRotatedStyle = { transform: "rotate(-90deg)", color: "white" };
 
 export const ExpandableCard: React.FC<ExpandableCardProps> = ({
   color = "#644BAB",

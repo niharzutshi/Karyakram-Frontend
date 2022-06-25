@@ -28,6 +28,13 @@ const LandingPage = () => {
           <LandingPageFooter />
         </Grid>
       </Grid>
+      <Box display={{ xs: "none", sm: "none", lg: "block", md: "none" }}>
+        <img
+          src="https://i.imgur.com/ZBvrLmY.png"
+          alt="astronaut on planet"
+          style={{ position: "absolute", zIndex: "2", top: "56%" }}
+        />
+      </Box>
     </Box>
   );
 };

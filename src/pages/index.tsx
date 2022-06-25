@@ -1,14 +1,14 @@
 import React from "react";
-import { useRecoilValue } from "recoil";
 
-import { userAuthState } from "../store/userAuthState";
 import LandingPage from "./landingPage";
 import Dashboard from "./dashboard";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase/clientApp";
 
 const App = () => {
-  const userAuthenticated = useRecoilValue(userAuthState);
+  const [user] = useAuthState(auth);
 
-  return <>{userAuthenticated ? <LandingPage /> : <Dashboard />}</>;
+  return <>{!user ? <LandingPage /> : <Dashboard />}</>;
 };
 
 export default App;

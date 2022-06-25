@@ -1,12 +1,15 @@
+import { LoadingButton } from "@mui/lab";
 import { Button, Box, Typography } from "@mui/material";
 import React from "react";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useSetRecoilState } from "recoil";
 
-// import { useSignInWithGoogle } from "react-firebase-hooks/auth";
-
-// import { auth } from "../../firebase/clientApp";
+import { auth } from "../../firebase/clientApp";
+import { authModalState } from "../../store/authModalState";
 
 export const OAuthOptions: React.FC = () => {
-  //     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const setModalState = useSetRecoilState(authModalState);
   return (
     <Box
       display="flex"
@@ -16,27 +19,52 @@ export const OAuthOptions: React.FC = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Button
-        style={{
-          textTransform: "none",
-          border: "1px solid white",
-          color: "white",
-          borderRadius: "15px",
-          padding: "10px",
-          width: "70%",
-        }}
-        // isLoading={loading}
-        // onClick={() => signInWithGoogle()}
-      >
-        <img
-          alt="Google Logo"
-          src="https://i.imgur.com/vmMQ8OV.png"
-          height="20px"
-          style={{ marginRight: "10px" }}
+      {loading ? (
+        <LoadingButton
+          loading={true}
+          style={{
+            height: "45px",
+            border: "1px solid white",
+            textTransform: "none",
+            color: "white",
+            borderRadius: "15px",
+            padding: "10px",
+            width: "70%",
+          }}
         />
-        Continue with Google
-      </Button>
-      {/* <Typography>{error?.message}</Typography> */}
+      ) : (
+        <Button
+          style={{
+            textTransform: "none",
+            border: "1px solid white",
+            color: "white",
+            borderRadius: "15px",
+            padding: "10px",
+            width: "70%",
+          }}
+          onClick={() => {
+            signInWithGoogle();
+          }}
+        >
+          <img
+            alt="Google Logo"
+            src="https://i.imgur.com/vmMQ8OV.png"
+            height="20px"
+            style={{ marginRight: "10px" }}
+          />
+          Continue with Google
+        </Button>
+      )}
+      <Typography
+        style={{
+          marginTop: "5px",
+          fontSize: "10px",
+          color: "red",
+          cursor: "default",
+        }}
+      >
+        {error?.message}
+      </Typography>
     </Box>
   );
 };

@@ -1,9 +1,9 @@
 import Navbar from "./Navbar";
 import React, { PropsWithChildren } from "react";
 import { Box, Grid } from "@mui/material";
-import { useRecoilValue } from "recoil";
 import { Sidebar } from "../components/Sidebar/Sidebar";
-import { userAuthState } from "../store/userAuthState";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase/clientApp";
 
 type HomeLayoutProps = {
   children: any;
@@ -12,7 +12,7 @@ type HomeLayoutProps = {
 const HomeLayout: React.FC<PropsWithChildren<HomeLayoutProps>> = ({
   children,
 }) => {
-  const userAuthenticated = useRecoilValue(userAuthState);
+  const [user] = useAuthState(auth);
   return (
     <Box>
       <Grid container>
@@ -25,7 +25,7 @@ const HomeLayout: React.FC<PropsWithChildren<HomeLayoutProps>> = ({
               width: "100%",
             }}
           >
-            {!userAuthenticated && (
+            {user && (
               <Box
                 display={{ xs: "none", sm: "none", lg: "block", md: "none" }}
               >

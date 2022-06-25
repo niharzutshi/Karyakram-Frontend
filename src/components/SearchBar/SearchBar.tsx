@@ -13,6 +13,7 @@ const searchBarContainer = {
   color: "white",
   borderRadius: "12px",
   border: "none",
+  maxWidth: "500px",
 };
 
 const searchBarContainerDark = {

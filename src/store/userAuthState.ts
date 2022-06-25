@@ -1,6 +1,14 @@
 import { atom } from "recoil";
+import { auth } from "../firebase/clientApp";
 
-const defaultUserAuthState = false;
+let defaultUserAuthState = true;
+// auth.onAuthStateChanged(function (user) {
+//   if (user) {
+//     defaultUserAuthState = true;
+//   } else {
+//     defaultUserAuthState = false;
+//   }
+// });
 // typeof window !== undefined
 //   ? localStorage.getItem("user-auth")
 //     ? true

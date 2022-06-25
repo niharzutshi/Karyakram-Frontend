@@ -1,13 +1,39 @@
 import { Button, Input, Typography } from "@mui/material";
 import { authModalState } from "../../store/authModalState";
-import React from "react";
-import { useRecoilState } from "recoil";
+import React, { useState } from "react";
+import { useSetRecoilState } from "recoil";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase/clientApp";
+import { FIREBASE_ERRORS } from "../../firebase/errors";
+import { LoadingButton } from "@mui/lab";
 
 const inputStyle = { marginBottom: "20px", width: "100%" };
 
 export const Login: React.FC = () => {
-  const [modalState, setModalState] = useRecoilState(authModalState);
-  const onSubmit = () => {};
+  const setModalState = useSetRecoilState(authModalState);
+  const [loginForm, setLoginForm] = useState({
+    email: "",
+    password: "",
+  });
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  // Firebase logic
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    signInWithEmailAndPassword(loginForm.email, loginForm.password);
+    setModalState((prev) => ({
+      ...prev,
+      open: false,
+    }));
+  };
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // Update form state
+    setLoginForm((prev) => ({
+      ...prev,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
   return (
     <form
       onSubmit={onSubmit}
@@ -24,6 +50,7 @@ export const Login: React.FC = () => {
         name="email"
         placeholder="Enter Your Email"
         style={inputStyle}
+        onChange={onChange}
       />
       <Input
         required
@@ -31,20 +58,48 @@ export const Login: React.FC = () => {
         name="password"
         placeholder="Enter Your Password"
         style={inputStyle}
+        onChange={onChange}
       />
-      <Button
-        style={{
-          borderRadius: "10px",
-          textTransform: "none",
-          padding: "5px 20px 5px 20px",
-          backgroundColor: "#800C83",
-          color: "white",
-          fontSize: 15,
-          marginRight: "15px",
-        }}
+      <Typography
+        alignItems="center"
+        color="red"
+        fontSize="10pt"
+        style={{ cursor: "default" }}
       >
-        Log In
-      </Button>
+        {FIREBASE_ERRORS[error?.message as keyof typeof FIREBASE_ERRORS]}
+      </Typography>
+      {!loading ? (
+        <Button
+          style={{
+            marginTop: "15px",
+            borderRadius: "10px",
+            textTransform: "none",
+            padding: "5px 20px 5px 20px",
+            backgroundColor: "#800C83",
+            color: "white",
+            fontSize: 15,
+            marginRight: "15px",
+          }}
+          type="submit"
+        >
+          Log In
+        </Button>
+      ) : (
+        <LoadingButton
+          style={{
+            borderRadius: "10px",
+            marginTop: "15px",
+            height: "35px",
+            width: "90px",
+            textTransform: "none",
+            padding: "5px 20px 5px 20px",
+            backgroundColor: "#800C83",
+            color: "white",
+            fontSize: 15,
+            marginRight: "15px",
+          }}
+        />
+      )}
       <Typography
         style={{
           marginTop: "10px",

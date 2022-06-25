@@ -3,16 +3,16 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-
-const h1Styles = {
-  height: "50px",
-  width: "50px",
-  borderRadius: "50%",
-  margintop: "80px",
-  marginRight: "5px",
-};
+import { Avatar, Typography } from "@mui/material";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase/clientApp";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useSetRecoilState } from "recoil";
+import { authModalState } from "../../store/authModalState";
 
 export const ProfileDropdown = () => {
+  const setAuthModal = useSetRecoilState(authModalState);
+  const [user] = useAuthState(auth);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -20,6 +20,14 @@ export const ProfileDropdown = () => {
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+  const logout = () => {
+    handleClose();
+    signOut(auth);
+    setAuthModal((prev) => ({
+      ...prev,
+      open: false,
+    }));
   };
 
   return (
@@ -30,19 +38,21 @@ export const ProfileDropdown = () => {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        style={{
+          display: "flex",
+          textAlign: "center",
+        }}
       >
-        <img
-          style={h1Styles}
-          src="https://i.imgur.com/YuUnLZS.png"
-          alt=""
-          height="8px"
-          width="8px"
+        <Avatar
+          sx={{ width: 30, height: 30 }}
+          style={{ marginRight: "10px" }}
         />
-        Why again bts ?
+        <Typography>{user?.email?.split("@")[0]}</Typography>
         <ArrowDropDownIcon />
       </Button>
       <Menu
         id="basic-menu"
+        style={{ marginTop: "5px" }}
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -50,9 +60,11 @@ export const ProfileDropdown = () => {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>My Profile</MenuItem>
         <MenuItem onClick={handleClose}>Wallet</MenuItem>
+        <MenuItem onClick={handleClose}>My Profile</MenuItem>
         <MenuItem onClick={handleClose}>Notifications</MenuItem>
+        <MenuItem onClick={handleClose}>Settings</MenuItem>
+        <MenuItem onClick={logout}>Logout</MenuItem>
       </Menu>
     </div>
   );
