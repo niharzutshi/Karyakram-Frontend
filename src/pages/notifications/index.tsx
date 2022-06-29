@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useSetRecoilState } from "recoil";
 
-import { NotificationCard } from "../../components/NotificationCard/NotificationCard";
-import HomeLayout from "../../layouts/HomeLayout";
+import { NotificationCard } from "../../components/Cards/NotificationCard/NotificationCard";
+import HomeLayout from "../../components/Layouts/HomeLayout";
 import { selectedPageState } from "../../store/selectedPageState";
 
 const Notifications = () => {

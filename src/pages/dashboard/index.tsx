@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { useSetRecoilState } from "recoil";
 
-import DashboardGlobe from "../../components/DashboardGlobe/DashboardGlobe";
-import { ExpandableCard } from "../../components/ExpandableCard/ExpandableCard";
-import HomeLayout from "../../layouts/HomeLayout";
+import DashboardGlobe from "../../components/Dashboard/DashboardGlobe/DashboardGlobe";
+import { ExpandableCard } from "../../components/Cards/ExpandableCard/ExpandableCard";
+import HomeLayout from "../../components/Layouts/HomeLayout";
 import { selectedPageState } from "../../store/selectedPageState";
 
 const Dashboard = () => {

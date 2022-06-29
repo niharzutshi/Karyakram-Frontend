@@ -5,15 +5,15 @@ import Container from "@mui/material/Container";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { Button } from "@mui/material";
 
-import { PlanMeeting } from "../../components/PlanMeeting/PlanMeeting";
-import { UserInfoCard } from "../../components/UserInfoCard/UserInfoCard";
-import { RightPanelUpper } from "../../components/RightPanelUpper/RightPanelUpper";
-import { RightPanelLower } from "../../components/RightPanelLower/RightPanelLower";
-import { CalendarComponent } from "../../components/CalendarComponent/CalendarComponent";
-import { TimeSlotSelection } from "../../components/TimeSlotSelection/TimeSlotSelection";
+import { PlanMeeting } from "../../components/Calendar/PlanMeeting/PlanMeeting";
+import { UserInfoCard } from "../../components/Cards/UserInfoCard/UserInfoCard";
+import { RightPanelUpper } from "../../components/Globals/RightPanelUpper/RightPanelUpper";
+import { RightPanelLower } from "../../components/Globals/RightPanelLower/RightPanelLower";
+import { CalendarComponent } from "../../components/Calendar/CalendarComponent/CalendarComponent";
+import { TimeSlotSelection } from "../../components/Calendar/TimeSlotSelection/TimeSlotSelection";
 import { calVisibilityState } from "../../store/calVisibilityState";
 import { selectedPageState } from "../../store/selectedPageState";
-import HomeLayout from "../../layouts/HomeLayout";
+import HomeLayout from "../../components/Layouts/HomeLayout";
 
 const Calendar = () => {
   const [calVisibility, setCalVisibility] = useRecoilState(calVisibilityState);

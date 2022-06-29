@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { useSetRecoilState } from "recoil";
 
-import { RightPanelLower } from "../../components/RightPanelLower/RightPanelLower";
-import { RightPanelUpper } from "../../components/RightPanelUpper/RightPanelUpper";
-import { TrendingCard } from "../../components/TrendingCard/TrendingCard";
-import TrendingHighlight from "../../components/TrendingHighlight/TrendingHighlight";
-import HomeLayout from "../../layouts/HomeLayout";
+import { RightPanelLower } from "../../components/Globals/RightPanelLower/RightPanelLower";
+import { RightPanelUpper } from "../../components/Globals/RightPanelUpper/RightPanelUpper";
+import { TrendingCard } from "../../components/Cards/TrendingCard/TrendingCard";
+import TrendingHighlight from "../../components/Trending/TrendingHighlight/TrendingHighlight";
+import HomeLayout from "../../components/Layouts/HomeLayout";
 import { selectedPageState } from "../../store/selectedPageState";
 
 const Trending = () => {

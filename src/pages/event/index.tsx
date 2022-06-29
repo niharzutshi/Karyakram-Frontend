@@ -12,10 +12,10 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
-import { EventDescription } from "../../components/EventDescription/EventDescription";
-import { RightPanelUpper } from "../../components/RightPanelUpper/RightPanelUpper";
-import { RightPanelLower } from "../../components/RightPanelLower/RightPanelLower";
-import HomeLayout from "../../layouts/HomeLayout";
+import { EventDescription } from "../../components/Event/EventDescription/EventDescription";
+import { RightPanelUpper } from "../../components/Globals/RightPanelUpper/RightPanelUpper";
+import { RightPanelLower } from "../../components/Globals/RightPanelLower/RightPanelLower";
+import HomeLayout from "../../components/Layouts/HomeLayout";
 
 const Event = () => {
   return (
