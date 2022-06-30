@@ -2,17 +2,12 @@
   "name": "karyakram-app",
   "private": true,
   "version": "0.0.0",
-  "lint-staged": {
-    ".": [
-      "prettier --write ."
-    ]
-  },
   "scripts": {
     "dev": "next dev",
     "build": "tsc && next build",
     "start": "next start",
     "format": "prettier --write .",
-    "lint": "lint-staged",
+    "lint-staged": "lint-staged",
     "export": "next export",
     "postinstall": "patch-package",
     "prepare": "husky install"
