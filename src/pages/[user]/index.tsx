@@ -1,7 +1,12 @@
 import React from "react";
+import HomeLayout from "../../components/Layouts/HomeLayout";
 
 const User = () => {
-  return <div>User Profile</div>;
+  return (
+    <HomeLayout>
+      <div>Test</div>
+    </HomeLayout>
+  );
 };
 
 export default User;
