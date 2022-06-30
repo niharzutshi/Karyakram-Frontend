@@ -16,7 +16,7 @@ const HomeLayout: React.FC<PropsWithChildren<HomeLayoutProps>> = ({
   return (
     <Box>
       <Grid container>
-        <Grid item xs={0.5}>
+        <Grid item xs={0.57}>
           <Box
             style={{
               position: "absolute",
@@ -34,7 +34,7 @@ const HomeLayout: React.FC<PropsWithChildren<HomeLayoutProps>> = ({
             )}
           </Box>
         </Grid>
-        <Grid item xs={11.5}>
+        <Grid item xs={11.43}>
           <Navbar />
           {children}
         </Grid>
