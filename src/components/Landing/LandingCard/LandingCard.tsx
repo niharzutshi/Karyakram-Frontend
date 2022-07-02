@@ -4,6 +4,7 @@ import { useSetRecoilState } from "recoil";
 
 import { LandingInfo } from "../LandingInfo/LandingInfo";
 import { authModalState } from "../../../store/authModalState";
+import Image from "next/image";
 
 export const LandingCard = () => {
   const setModalState = useSetRecoilState(authModalState);
@@ -41,11 +42,11 @@ export const LandingCard = () => {
               marginLeft: "60px",
             }}
           >
-            <img
+            <Image
+              height="300px"
+              width="480px"
               style={{
                 padding: "8px",
-                width: "480px",
-                height: "300px",
                 borderRadius: "20px",
               }}
               src="https://i.imgur.com/iqukoXx.png"

@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import ButtonBase from "@mui/material/ButtonBase";
+import Image from "next/image";
 
 // @ts-ignore
 const Img = styled("img")({
@@ -18,10 +19,10 @@ export const EventDescription = () => {
     <Grid container spacing={2} sx={{ marginTop: "10px" }}>
       <Grid item>
         <ButtonBase sx={{}}>
-          <img
+          <Image
+            height="100px"
+            width="100px"
             style={{
-              height: "100px",
-              width: "100px",
               borderRadius: "360px",
               border: "5px solid #800C83",
             }}

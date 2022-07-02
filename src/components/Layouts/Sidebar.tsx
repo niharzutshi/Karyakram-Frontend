@@ -5,9 +5,10 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Drawer, List, ListItem, ListItemIcon } from "@mui/material";
 import Tooltip from "@mui/material/Tooltip";
 import { useRecoilValue } from "recoil";
+import { useRouter } from "next/router";
+import Image from "next/image";
 
 import { selectedPageState } from "../../store/selectedPageState";
-import { useRouter } from "next/router";
 
 export const Sidebar: React.FC = () => {
   const selectedPage = useRecoilValue(selectedPageState).selectedPage;
@@ -43,7 +44,11 @@ export const Sidebar: React.FC = () => {
         >
           <Tooltip title="Home">
             <ListItemIcon className="karyakram-logo">
-              <img src={"https://i.imgur.com/qjwghoE.png"} />
+              <Image
+                src="https://i.imgur.com/qjwghoE.png"
+                width="60px"
+                height="50px"
+              />
             </ListItemIcon>
           </Tooltip>
         </ListItem>

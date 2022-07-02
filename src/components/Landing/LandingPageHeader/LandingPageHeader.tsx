@@ -3,6 +3,7 @@ import { authModalState } from "../../../store/authModalState";
 import React from "react";
 import Link from "next/link";
 import { useRecoilValue, useSetRecoilState } from "recoil";
+import Image from "next/image";
 
 export const LandingPageHeader = () => {
   const setAuthModalState = useSetRecoilState(authModalState);
@@ -19,13 +20,11 @@ export const LandingPageHeader = () => {
         }}
       >
         <Link href="/">
-          <img
+          <Image
+            height="35px"
+            width="220px"
             src="https://i.imgur.com/HbgpwLa.png"
             alt="Karyakram Logo"
-            style={{
-              height: "35px",
-              width: "220px",
-            }}
           />
         </Link>
         <Link href="/">

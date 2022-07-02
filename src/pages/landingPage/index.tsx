@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import { LandingCard } from "../../components/Landing/LandingCard/LandingCard";
 import { LandingPageHeader } from "../../components/Landing/LandingPageHeader/LandingPageHeader";
 import { LandingPageFooter } from "../../components/Landing/LandingPageFooter/LandingPageFooter";
+import Image from "next/image";
 
 const LandingPage = () => {
   return (
@@ -28,11 +29,17 @@ const LandingPage = () => {
           <LandingPageFooter />
         </Grid>
       </Grid>
-      <Box display={{ xs: "none", sm: "none", lg: "block", md: "none" }}>
-        <img
+      <Box
+        display={{ xs: "none", sm: "none", lg: "block", md: "none" }}
+        position="absolute"
+        top="56%"
+      >
+        <Image
+          height="320px"
+          width="180px"
           src="https://i.imgur.com/ZBvrLmY.png"
           alt="astronaut on planet"
-          style={{ position: "absolute", zIndex: "2", top: "56%" }}
+          style={{ zIndex: "2" }}
         />
       </Box>
     </Box>
