@@ -43,10 +43,10 @@ export const LandingCard = () => {
             }}
           >
             <Image
+              height="300px"
+              width="480px"
               style={{
                 padding: "8px",
-                width: "480px",
-                height: "300px",
                 borderRadius: "20px",
               }}
               src="https://i.imgur.com/iqukoXx.png"

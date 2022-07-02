@@ -20,9 +20,9 @@ export const EventDescription = () => {
       <Grid item>
         <ButtonBase sx={{}}>
           <Image
+            height="100px"
+            width="100px"
             style={{
-              height: "100px",
-              width: "100px",
               borderRadius: "360px",
               border: "5px solid #800C83",
             }}

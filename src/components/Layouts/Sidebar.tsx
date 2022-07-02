@@ -44,7 +44,7 @@ export const Sidebar: React.FC = () => {
         >
           <Tooltip title="Home">
             <ListItemIcon className="karyakram-logo">
-              <Image src={"https://i.imgur.com/qjwghoE.png"} />
+              <Image src={"https://i.imgur.com/qjwghoE.png"} layout="fill" />
             </ListItemIcon>
           </Tooltip>
         </ListItem>

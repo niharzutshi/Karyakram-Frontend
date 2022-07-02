@@ -25,11 +25,11 @@ const TrendingDisplayCard: React.FC<TrendingDisplayCardProps> = () => {
         }}
       >
         <Image
+          width="100px"
+          height="100px"
           alt="user profile"
           src="https://static.remove.bg/remove-bg-web/726c8211ef4fdb5ce44accdf843f9bab4d2a356a/assets/start_remove-c851bdf8d3127a24e2d137a55b1b427378cd17385b01aec6e59d5d4b5f39d2ec.png"
           style={{
-            width: "100px",
-            height: "100px",
             display: "block",
             borderRadius: "120px",
             margin: "30px auto 0",

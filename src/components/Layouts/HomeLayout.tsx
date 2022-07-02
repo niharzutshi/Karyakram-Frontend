@@ -40,11 +40,17 @@ const HomeLayout: React.FC<PropsWithChildren<HomeLayoutProps>> = ({
           {children}
         </Grid>
       </Grid>
-      <Box display={{ xs: "none", sm: "none", lg: "block", md: "none" }}>
+      <Box
+        display={{ xs: "none", sm: "none", lg: "block", md: "none" }}
+        position="absolute"
+        top="56%"
+      >
         <Image
+          height="320px"
+          width="180px"
           src="https://i.imgur.com/ZBvrLmY.png"
           alt="astronaut on planet"
-          style={{ position: "absolute", zIndex: "2", top: "57.4%" }}
+          style={{ position: "absolute", zIndex: "2", top: "-57.4%" }}
         />
       </Box>
     </Box>

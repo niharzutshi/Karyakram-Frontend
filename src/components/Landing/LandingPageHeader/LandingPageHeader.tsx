@@ -21,12 +21,10 @@ export const LandingPageHeader = () => {
       >
         <Link href="/">
           <Image
+            height="35px"
+            width="220px"
             src="https://i.imgur.com/HbgpwLa.png"
             alt="Karyakram Logo"
-            style={{
-              height: "35px",
-              width: "220px",
-            }}
           />
         </Link>
         <Link href="/">

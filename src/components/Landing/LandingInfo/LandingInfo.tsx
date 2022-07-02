@@ -56,6 +56,8 @@ export const LandingInfo = () => {
       <Image
         src="https://i.imgur.com/YuUnLZS.png"
         alt="astronaut2"
+        height="270px"
+        width="290px"
         style={{
           float: "right",
           height: "270px",

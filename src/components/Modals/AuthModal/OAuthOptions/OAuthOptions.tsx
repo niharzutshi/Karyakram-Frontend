@@ -51,6 +51,7 @@ export const OAuthOptions: React.FC = () => {
             alt="Google Logo"
             src="https://i.imgur.com/vmMQ8OV.png"
             height="20px"
+            layout="fill"
             style={{ marginRight: "10px" }}
           />
           Continue with Google
