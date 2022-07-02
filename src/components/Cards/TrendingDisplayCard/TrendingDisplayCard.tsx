@@ -18,24 +18,21 @@ const TrendingDisplayCard: React.FC<TrendingDisplayCardProps> = () => {
       <div
         style={{
           position: "absolute",
-          top: "-95px",
+          top: "-70px",
           textAlign: "center",
           width: "100%",
           zIndex: "2",
         }}
       >
         <Image
+          style={{
+            borderRadius: "120px",
+          }}
           width="100px"
           height="100px"
+          objectFit="cover"
           alt="user profile"
           src="https://static.remove.bg/remove-bg-web/726c8211ef4fdb5ce44accdf843f9bab4d2a356a/assets/start_remove-c851bdf8d3127a24e2d137a55b1b427378cd17385b01aec6e59d5d4b5f39d2ec.png"
-          style={{
-            display: "block",
-            borderRadius: "120px",
-            margin: "30px auto 0",
-            border: "4px solid #79507A",
-            objectFit: "cover",
-          }}
         />
       </div>
       <Box

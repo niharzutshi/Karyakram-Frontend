@@ -16,14 +16,8 @@ const TrendingHighlight: React.FC<TrendingHighlightProps> = () => {
       <Image
         src="https://scontent.fdel9-1.fna.fbcdn.net/v/t1.6435-9/56157715_2289257071119529_8458002770148982784_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=k87PRzeSFMoAX9QS5Bv&_nc_ht=scontent.fdel9-1.fna&oh=00_AT_nInl-1yCDyNIDd3-Bae_YQrBOgMWVCeLTwOACfwIrIQ&oe=62D4BBCF"
         alt="event pic"
-        height="100%"
-        width="100%"
-        style={{
-          maxWidth: "100%",
-          objectFit: "cover",
-          maxHeight: "100%",
-          width: "100%",
-        }}
+        layout="fill"
+        objectFit="cover"
       />
       <Box position="absolute" left="85%" bottom={0} top="10%">
         <TrendingDisplayCard />
