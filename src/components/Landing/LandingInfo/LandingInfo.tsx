@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { useSetRecoilState } from "recoil";
 
@@ -52,7 +53,7 @@ export const LandingInfo = () => {
       >
         Get Started
       </button>
-      <img
+      <Image
         src="https://i.imgur.com/YuUnLZS.png"
         alt="astronaut2"
         style={{

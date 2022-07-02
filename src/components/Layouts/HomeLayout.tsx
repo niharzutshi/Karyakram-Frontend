@@ -4,6 +4,7 @@ import { Box, Grid } from "@mui/material";
 import { Sidebar } from "./Sidebar";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase/clientApp";
+import Image from "next/image";
 
 type HomeLayoutProps = {
   children: any;
@@ -40,7 +41,7 @@ const HomeLayout: React.FC<PropsWithChildren<HomeLayoutProps>> = ({
         </Grid>
       </Grid>
       <Box display={{ xs: "none", sm: "none", lg: "block", md: "none" }}>
-        <img
+        <Image
           src="https://i.imgur.com/ZBvrLmY.png"
           alt="astronaut on planet"
           style={{ position: "absolute", zIndex: "2", top: "57.4%" }}

@@ -1,6 +1,7 @@
 import TrendingDisplayCard from "../../Cards/TrendingDisplayCard/TrendingDisplayCard";
 import { Box } from "@mui/material";
 import React from "react";
+import Image from "next/image";
 
 type TrendingHighlightProps = {};
 
@@ -12,7 +13,7 @@ const TrendingHighlight: React.FC<TrendingHighlightProps> = () => {
       width="85%"
       height="250px"
     >
-      <img
+      <Image
         src="https://scontent.fdel9-1.fna.fbcdn.net/v/t1.6435-9/56157715_2289257071119529_8458002770148982784_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=k87PRzeSFMoAX9QS5Bv&_nc_ht=scontent.fdel9-1.fna&oh=00_AT_nInl-1yCDyNIDd3-Bae_YQrBOgMWVCeLTwOACfwIrIQ&oe=62D4BBCF"
         alt="event pic"
         style={{

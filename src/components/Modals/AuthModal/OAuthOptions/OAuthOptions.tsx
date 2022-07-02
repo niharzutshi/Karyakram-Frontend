@@ -1,5 +1,6 @@
 import { LoadingButton } from "@mui/lab";
 import { Button, Box, Typography } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useSetRecoilState } from "recoil";
@@ -46,7 +47,7 @@ export const OAuthOptions: React.FC = () => {
             signInWithGoogle();
           }}
         >
-          <img
+          <Image
             alt="Google Logo"
             src="https://i.imgur.com/vmMQ8OV.png"
             height="20px"

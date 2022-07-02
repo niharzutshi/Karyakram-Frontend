@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import img from "next/image";
+import Image from "next/image";
 
 type TrendingDisplayCardProps = {};
 
@@ -24,7 +24,7 @@ const TrendingDisplayCard: React.FC<TrendingDisplayCardProps> = () => {
           zIndex: "2",
         }}
       >
-        <img
+        <Image
           alt="user profile"
           src="https://static.remove.bg/remove-bg-web/726c8211ef4fdb5ce44accdf843f9bab4d2a356a/assets/start_remove-c851bdf8d3127a24e2d137a55b1b427378cd17385b01aec6e59d5d4b5f39d2ec.png"
           style={{

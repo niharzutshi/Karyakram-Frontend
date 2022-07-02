@@ -8,6 +8,7 @@ import { useRecoilValue } from "recoil";
 
 import { selectedPageState } from "../../store/selectedPageState";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export const Sidebar: React.FC = () => {
   const selectedPage = useRecoilValue(selectedPageState).selectedPage;
@@ -43,7 +44,7 @@ export const Sidebar: React.FC = () => {
         >
           <Tooltip title="Home">
             <ListItemIcon className="karyakram-logo">
-              <img src={"https://i.imgur.com/qjwghoE.png"} />
+              <Image src={"https://i.imgur.com/qjwghoE.png"} />
             </ListItemIcon>
           </Tooltip>
         </ListItem>

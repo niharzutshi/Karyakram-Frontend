@@ -108,7 +108,6 @@
     "@/pages/*": ["src/pages/*"],
     "@/src/*": ["src/*"],
     "@/shared": ["src/shared/*"],
-    "@/store": ["src/store/*"],
-    "@/assets": ["src/assets/*"]
+    "@/store": ["src/store/*"]
   }
 }
