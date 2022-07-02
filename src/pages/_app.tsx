@@ -26,7 +26,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           styles={css`
             @font-face {
               font-family: inter;
-              src: url("./assets/fonts/Inter-Regular.ttf");
+              src: url("/fonts/Inter-Regular.ttf");
             }
             body {
               font-family: inter;
