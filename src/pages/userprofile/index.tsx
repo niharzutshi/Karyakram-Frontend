@@ -62,7 +62,7 @@ declare module "@mui/material/Button" {
 const Userprofile = () => {
   const [checked, setChecked] = React.useState([0]);
 
-  const handleToggle = (value: String) => () => {
+  const handleToggle = (value: number) => () => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
 
@@ -74,6 +74,8 @@ const Userprofile = () => {
 
     setChecked(newChecked);
   };
+
+  const change = (value: number) => () => {};
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -174,8 +176,9 @@ const Userprofile = () => {
                       borderRadius: "20px",
                     }}
                   >
-                    {["Public", "Private", "Freinds"].map((value) => {
+                    {[0, 1, 2].map((value) => {
                       const labelId = `checkbox-list-label-${value}`;
+                      const listF = ["All", "Friends", "Only me"];
 
                       return (
                         <ListItem
@@ -205,7 +208,7 @@ const Userprofile = () => {
                             <ListItemText
                               sx={{ font: "black" }}
                               id={labelId}
-                              primary={` ${value}`}
+                              primary={listF[value]}
                             />
                           </ListItemButton>
                         </ListItem>
