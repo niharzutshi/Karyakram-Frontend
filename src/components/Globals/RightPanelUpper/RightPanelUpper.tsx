@@ -16,9 +16,11 @@ export const RightPanelUpper = () => {
         backgroundColor: "#242424",
         borderRadius: "25px",
         width: "350px",
-        overFlowY: "scroll",
         alignItems: "center",
         paddingTop: 2,
+        overflowY: "scroll",
+        overflowX: "scroll",
+        height: "300px",
       }}
     >
       <Typography variant="h5" color="white" style={{ cursor: "default" }}>

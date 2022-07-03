@@ -3,6 +3,9 @@
   src: url("/fonts/Inter-Regular.ttf");
 }
 
+html, body {
+  overflow: hidden;
+}
 /* RightPanelUpper Sytling */
 .right-panel__container {
   padding: 20px;
