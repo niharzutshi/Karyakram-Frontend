@@ -5,6 +5,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import HomeLayout from "../../components/Layouts/HomeLayout";
 import { auth } from "../../firebase/clientApp";
 import Calendar from "../calendar";
+import Userprofile from "../userprofile";
+import index from "../userprofile";
 
 const User = () => {
   const [user] = useAuthState(auth);
@@ -15,16 +17,10 @@ const User = () => {
         <HomeLayout>
           <Box
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              fontSize: "50px",
+              padding: "20px",
             }}
           >
-            To be handled by{"  "}
-            <a href="https://github.com/pulkitvyas08/Karyakram-Frontend/issues/84">
-              #84
-            </a>
+            <Userprofile />
           </Box>
         </HomeLayout>
       ) : (
