@@ -40,13 +40,13 @@ export const LandingCard = () => {
               borderRadius: "20px",
               display: "inline-block",
               marginLeft: "60px",
+              padding: "6px",
             }}
           >
             <Image
               height="300px"
               width="480px"
               style={{
-                padding: "8px",
                 borderRadius: "20px",
               }}
               src="https://i.imgur.com/iqukoXx.png"
